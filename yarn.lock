@@ -5231,9 +5231,9 @@ validate-npm-package-name@^3.0.0, validate-npm-package-name@~3.0.0:
   dependencies:
     builtins "^1.0.3"
 
-vanilla-framework@1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-1.7.0.tgz#ae198e46f0823ee2d316bcd2783e4846df676728"
+vanilla-framework@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-1.8.0.tgz#b5aacc3ce60a521b8de8f160cb505807aadc7869"
 
 vendors@^1.0.0:
   version "1.0.1"
