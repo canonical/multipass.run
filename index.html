@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<header id="navigation" class="p-navigation">
+  <div class="row">
+    <div class="p-navigation__banner">
+      <div class="p-navigation__logo">
+        <a class="p-navigation__link" href="/">
+          <h3 class="p-navigation__image">Multipass</h3>
+        </a>
+      </div>
+      <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+      <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+    </div>
+    <nav class="p-navigation__nav" role="menubar">
+      <span class="u-off-screen">
+        <a href="#main-content">Jump to main content</a>
+      </span>
+      <ul class="p-navigation__links" role="menu">
+        <li class="p-navigation__link is-selected" role="menuitem">
+          <a href="/docs">Docs</a>
+        </li>
+        <li class="p-navigation__link" role="menuitem">
+          <a href="https://discourse.ubuntu.com/c/multipass">Discourse</a>
+        </li>
+        <li class="p-navigation__link" role="menuitem">
+          <a href="https://blog.ubuntu.com/tag/multipass">Blog</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="p-strip is-deep is-bordered">
+  <div class="row">
+    <div class="col-8">
+      <h1>Multipass</h1>
+      <p class="p-heading--four">It's a system that orchestrates the creation, management and maintenance of virtual machines and associated Ubuntu images to simplify development.</p>
+    </div>
+    <div class="col-4">
+      <img src="http://via.placeholder.com/350x150" alt="" />
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--accent is-dark">
+  <div class="row">
+    <div class="col-8">
+      <h2>Get started</h2>
+      <p>It's available as a classically confined <code>snap</code>, in the beta channel:</p>
+      <ul class="p-list p-heading--four">
+        <li class="p-list__item"><code>$ sudo snap install multipass</code></li>
+        <li class="p-list__item"><code>$ multipass launch --name foo</code></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip">
+  <div class="row p-divider">
+    <div class="col-4 p-divider__block">
+      <h4>Run commands in an instance</h4>
+      <p><code>$ multipass exec foo lsb_release -a</code></p>
+    </div>
+    <div class="col-4 p-divider__block">
+      <h4>Find available images</h4>
+      <p><code>$ multipass find</code></p>
+    </div>
+    <div class="col-4 p-divider__block">
+      <h4>Get help</h4>
+      <p><code>$ multipass help</code></p>
+    </div>
+  </div>
+</section>

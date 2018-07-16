@@ -1,0 +1,8 @@
+@import "settings_colors";
+
+@import "vanilla-framework/scss/build";
+
+// XXX Fix for inline image SVGs that do not have dimensions set
+.p-inline-images__item > img {
+  width: 100%;
+}
