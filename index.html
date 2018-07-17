@@ -18,57 +18,111 @@ layout: default
       </span>
       <ul class="p-navigation__links" role="menu">
         <li class="p-navigation__link is-selected" role="menuitem">
-          <a href="/docs">Docs</a>
+          <a href="#">Docs</a>
         </li>
         <li class="p-navigation__link" role="menuitem">
-          <a href="https://discourse.ubuntu.com/c/multipass">Discourse</a>
-        </li>
-        <li class="p-navigation__link" role="menuitem">
-          <a href="https://blog.ubuntu.com/tag/multipass">Blog</a>
+          <a href="#">Install</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 
-<section class="p-strip is-deep is-bordered">
+<section class="p-strip--image is-dark is-deep" style="background-image: url('https://assets.ubuntu.com/v1/63c08d11-suru-background.png'); background-position: 75% 50%;">
   <div class="row">
     <div class="col-8">
-      <h1>Multipass</h1>
-      <p class="p-heading--four">It's a system that orchestrates the creation, management and maintenance of virtual machines and associated Ubuntu images to simplify development.</p>
-    </div>
-    <div class="col-4">
-      <img src="http://via.placeholder.com/350x150" alt="" />
+      <h1>Multipass, the quickest way to launch Ubuntu virtual machines on any OS</h1>
+      <p class="p-heading--four">The creation, management and maintenance of virtual machines and Ubuntu images simplified and orchestrated.</p>
+      <p><a href="#" class="p-button--neutral">Get started</a></p>
     </div>
   </div>
 </section>
 
-<section class="p-strip--accent is-dark">
+<section class="p-strip is-bordered">
   <div class="row">
-    <div class="col-8">
-      <h2>Get started</h2>
-      <p>It's available as a classically confined <code>snap</code>, in the beta channel:</p>
-      <ul class="p-list p-heading--four">
-        <li class="p-list__item"><code>$ sudo snap install multipass</code></li>
-        <li class="p-list__item"><code>$ multipass launch --name foo</code></li>
-      </ul>
+    <div class="col-4">
+      <div class="p-heading-icon">
+        <div class="p-heading-icon__header">
+          <img class="p-heading-icon__img" src="https://assets.ubuntu.com/v1/fe40dc6a-pictogram_lightweight01b-dark.svg" alt="Lightweight pictogram">
+          <h3 class="p-heading-icon__title">Creation</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget orci pharetra, bibendum felis ut, facilisis nisi. Sed tempus eros non elit ornare dapibus. Pellentesque sollicitudin accumsan lacus ac pulvinar.</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="p-heading-icon">
+        <div class="p-heading-icon__header">
+          <img class="p-heading-icon__img" src="https://assets.ubuntu.com/v1/ba665746-pictogram_extension01-dark.svg" alt="Composable pictogram">
+          <h3 class="p-heading-icon__title">Management</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget orci pharetra, bibendum felis ut, facilisis nisi. Sed tempus eros non elit ornare dapibus. Pellentesque sollicitudin accumsan lacus ac pulvinar.</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="p-heading-icon">
+        <div class="p-heading-icon__header">
+          <img class="p-heading-icon__img" src="https://assets.ubuntu.com/v1/bcf3db83-pictogram_opensource01-dark.svg" alt="Open source pictogram">
+          <h3 class="p-heading-icon__title">Maintenance</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget orci pharetra, bibendum felis ut, facilisis nisi. Sed tempus eros non elit ornare dapibus. Pellentesque sollicitudin accumsan lacus ac pulvinar.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="p-strip">
+  <div class="row">
+    <div class="col-6">
+      <h2>Get started</h2>
+      <p>Phasellus eget orci pharetra, bibendum felis ut, facilisis nisi. Sed tempus eros non elit ornare dapibus.</p>
+      <p><a href="#" class="p-button--positive">Install now</a> <a href="#">Installation tutorial&nbsp;&rsaquo;</a></p>
+    </div>
+    <div class="col-6">
+      <ul class="p-inline-images">
+        <li class="p-inline-images__item">
+          <img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/c4f35e06-products-hero-ubuntu.svg" alt="Placeholder image">
+        </li>
+        <li class="p-inline-images__item">
+          <img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/4239507e-picto-mac.svg" alt="Placeholder image">
+        </li>
+        <li class="p-inline-images__item">
+          <img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/08563efa-picto-windows.svg" alt="Placeholder image">
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--light">
+  <div class="row">
+    <div class="col-12">
+      <h3>Learn more</h3>
+    </div>
+  </div>
   <div class="row p-divider">
     <div class="col-4 p-divider__block">
-      <h4>Run commands in an instance</h4>
-      <p><code>$ multipass exec foo lsb_release -a</code></p>
+      <h4>Documentation</h4>
+      <p>Short summary of what to expect from the docs site.</p>
+      <p><a href="#" class="p-button">View the documentation</a></p>
     </div>
     <div class="col-4 p-divider__block">
-      <h4>Find available images</h4>
-      <p><code>$ multipass find</code></p>
+      <h4>Using cloud-init with Multipass</h4>
+      <p>This article originally appeared on Joshua Powers’ blog cloud-init + Multipass Multipass is a quick and easy way to launch virtual machine instances running Ubuntu.</p>
+      <p><a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">Read the article&nbsp;&rsaquo;</a></p>
     </div>
     <div class="col-4 p-divider__block">
-      <h4>Get help</h4>
-      <p><code>$ multipass help</code></p>
+      <h4>Get involved</h4>
+      <ul class="p-list--divided">
+        <li class="p-list__item is-ticked" style="background-image: url('https://assets.ubuntu.com/v1/5853f458-icon-slack.svg'); padding-left: 2.125rem; padding-top: .55rem;">
+          <a href="https://vanillaframework.slack.com" class="p-link--soft">Slack&nbsp;&rsaquo;</a>
+        </li>
+        <li class="p-list__item is-ticked" style="background-image: url('https://assets.ubuntu.com/v1/7546afeb-icon-twitter.svg'); padding-left: 2.125rem; padding-top: .55rem;">
+          <a href="https://twitter.com/vanillaframewrk" class="p-link--soft">Twitter&nbsp;&rsaquo;</a>
+        </li>
+        <li class="p-list__item is-ticked" style="background-image: url('https://assets.ubuntu.com/v1/61d83c7e-icon-github.svg'); padding-left: 2.125rem; padding-top: .55rem;">
+          <a href="https://github.com/vanilla-framework/vanilla-framework" class="p-link--soft">GitHub&nbsp;&rsaquo;</a>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
