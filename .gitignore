@@ -45,6 +45,7 @@ package-lock.json
 *.snap
 _site/
 *.*.map
+.jekyll-metadata
 
 # [env] Local environment settings
 .docker-project
