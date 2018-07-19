@@ -16,59 +16,108 @@ layout: default
       <span class="u-off-screen">
         <a href="#main-content">Jump to main content</a>
       </span>
-      <ul class="p-navigation__links" role="menu">
-        <li class="p-navigation__link is-selected" role="menuitem">
-          <a href="/docs">Docs</a>
-        </li>
-        <li class="p-navigation__link" role="menuitem">
-          <a href="https://discourse.ubuntu.com/c/multipass">Discourse</a>
-        </li>
-        <li class="p-navigation__link" role="menuitem">
-          <a href="https://blog.ubuntu.com/tag/multipass">Blog</a>
-        </li>
-      </ul>
     </nav>
   </div>
 </header>
 
-<section class="p-strip is-deep is-bordered">
+<section class="p-strip--image is-dark is-deep" style="background-image: url('https://assets.ubuntu.com/v1/63c08d11-suru-background.png'); background-position: 75% 50%;">
   <div class="row">
     <div class="col-8">
-      <h1>Multipass</h1>
-      <p class="p-heading--four">It's a system that orchestrates the creation, management and maintenance of virtual machines and associated Ubuntu images to simplify development.</p>
-    </div>
-    <div class="col-4">
-      <img src="http://via.placeholder.com/350x150" alt="" />
+      <h1>Multipass, the quickest way to launch Ubuntu virtual machines on any OS</h1>
+      <p class="p-heading--four">The creation, management and maintenance of virtual machines and Ubuntu images simplified and orchestrated.</p>
     </div>
   </div>
 </section>
 
-<section class="p-strip--accent is-dark">
+<section class="p-strip is-bordered">
   <div class="row">
-    <div class="col-8">
+    <div class="col-6">
       <h2>Get started</h2>
-      <p>It's available as a classically confined <code>snap</code>, in the beta channel:</p>
-      <ul class="p-list p-heading--four">
-        <li class="p-list__item"><code>$ sudo snap install multipass</code></li>
-        <li class="p-list__item"><code>$ multipass launch --name foo</code></li>
+      <p>It's available as a classically confined snap, in the beta channel:</p>
+      <div class="p-code-snippet">
+        <input class="p-code-snippet__input" value="sudo snap install multipass" readonly="readonly">
+        <button class="p-code-snippet__action">Copy to clipboard</button>
+      </div>
+
+      <div class="p-code-snippet">
+        <input class="p-code-snippet__input" value="multipass launch --name foo" readonly="readonly">
+        <button class="p-code-snippet__action">Copy to clipboard</button>
+      </div>
+    </div>
+    <div class="col-6">
+      <ul class="p-inline-images">
+        <li class="p-inline-images__item">
+          <img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/c4f35e06-products-hero-ubuntu.svg" alt="Placeholder image">
+        </li>
+        <li class="p-inline-images__item">
+          <img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/4239507e-picto-mac.svg" alt="Placeholder image">
+        </li>
+        <li class="p-inline-images__item">
+          <img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/08563efa-picto-windows.svg" alt="Placeholder image">
+        </li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="p-strip">
+<section class="p-strip--light">
+  <div class="row">
+    <div class="col-12">
+      <h3>Learn more</h3>
+    </div>
+  </div>
   <div class="row p-divider">
-    <div class="col-4 p-divider__block">
-      <h4>Run commands in an instance</h4>
-      <p><code>$ multipass exec foo lsb_release -a</code></p>
+    <div class="col-6 p-divider__block">
+      <h4>Using cloud-init with Multipass</h4>
+      <p>Multipass is a quick and easy way to launch virtual machine instances running Ubuntu. Cloud-init is the standard for customizing cloud instances and now multipass can also make use of cloud-init to customize an instance during launch.</p>
+      <p><a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">Read the article&nbsp;&rsaquo;</a></p>
     </div>
-    <div class="col-4 p-divider__block">
-      <h4>Find available images</h4>
-      <p><code>$ multipass find</code></p>
-    </div>
-    <div class="col-4 p-divider__block">
-      <h4>Get help</h4>
-      <p><code>$ multipass help</code></p>
+    <div class="col-6 p-divider__block">
+      <h4>Get involved</h4>
+      <p>Join in by forking the project on GitHub</p>
+      <ul class="p-list--divided">
+        <li class="p-list__item is-ticked" style="background-image: url('https://assets.ubuntu.com/v1/61d83c7e-icon-github.svg'); padding-left: 2.125rem; padding-top: .55rem;">
+          <a href="https://github.com/CanonicalLtd/multipass" class="p-link--soft">GitHub&nbsp;&rsaquo;</a>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
+
+<script>
+  const copyToClipboard = str => {
+    const el = document.createElement('textarea'); // Create a <textarea> element
+    el.value = str; // Set its value to the string that you want copied
+    el.setAttribute('readonly', ''); // Make it readonly to be tamper-proof
+    el.style.position = 'absolute';
+    el.style.left = '-9999px'; // Move outside the screen to make it invisible
+    document.body.appendChild(el); // Append the <textarea> element to the HTML document
+    const selected =
+      document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+        ? document.getSelection().getRangeAt(0) // Store selection if found
+        : false; // Mark as false to know no selection existed before
+    el.select(); // Select the <textarea> content
+    document.execCommand('copy'); // Copy - only works as a result of a user action (e.g. click events)
+    document.body.removeChild(el); // Remove the <textarea> element
+    if (selected) {
+      // If a selection existed before copying
+      document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
+      document.getSelection().addRange(selected); // Restore the original selection
+    }
+  };
+
+  var codeSnippetActions = document.querySelectorAll(
+    '.p-code-snippet__action'
+  );
+  for (var codeSnippetAction of codeSnippetActions) {
+    codeSnippetAction.addEventListener(
+      'click',
+      function(e) {
+        const clipboardValue = this.previousSibling.previousSibling.value;
+        copyToClipboard(clipboardValue);
+      },
+      false
+    );
+  }
+  </script>
+
