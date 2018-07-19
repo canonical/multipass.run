@@ -25,7 +25,6 @@ layout: default
     <div class="col-8">
       <h1>Multipass, the quickest way to launch Ubuntu virtual machines on any OS</h1>
       <p class="p-heading--four">The creation, management and maintenance of virtual machines and Ubuntu images simplified and orchestrated.</p>
-      <p><a href="#" class="p-button--neutral">Get started</a></p>
     </div>
   </div>
 </section>
@@ -70,7 +69,7 @@ layout: default
   <div class="row p-divider">
     <div class="col-6 p-divider__block">
       <h4>Using cloud-init with Multipass</h4>
-      <p>This article originally appeared on Joshua Powers’ blog cloud-init + Multipass Multipass is a quick and easy way to launch virtual machine instances running Ubuntu.</p>
+      <p>Multipass is a quick and easy way to launch virtual machine instances running Ubuntu. Cloud-init is the standard for customizing cloud instances and now multipass can also make use of cloud-init to customize an instance during launch.</p>
       <p><a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">Read the article&nbsp;&rsaquo;</a></p>
     </div>
     <div class="col-6 p-divider__block">
@@ -84,3 +83,41 @@ layout: default
     </div>
   </div>
 </section>
+
+<script>
+  const copyToClipboard = str => {
+    const el = document.createElement('textarea'); // Create a <textarea> element
+    el.value = str; // Set its value to the string that you want copied
+    el.setAttribute('readonly', ''); // Make it readonly to be tamper-proof
+    el.style.position = 'absolute';
+    el.style.left = '-9999px'; // Move outside the screen to make it invisible
+    document.body.appendChild(el); // Append the <textarea> element to the HTML document
+    const selected =
+      document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+        ? document.getSelection().getRangeAt(0) // Store selection if found
+        : false; // Mark as false to know no selection existed before
+    el.select(); // Select the <textarea> content
+    document.execCommand('copy'); // Copy - only works as a result of a user action (e.g. click events)
+    document.body.removeChild(el); // Remove the <textarea> element
+    if (selected) {
+      // If a selection existed before copying
+      document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
+      document.getSelection().addRange(selected); // Restore the original selection
+    }
+  };
+
+  var codeSnippetActions = document.querySelectorAll(
+    '.p-code-snippet__action'
+  );
+  for (var codeSnippetAction of codeSnippetActions) {
+    codeSnippetAction.addEventListener(
+      'click',
+      function(e) {
+        const clipboardValue = this.previousSibling.previousSibling.value;
+        copyToClipboard(clipboardValue);
+      },
+      false
+    );
+  }
+  </script>
+
