@@ -1,6 +1,6 @@
 # Multipass
 
-Codebase for https://multipass.io - the marketing website
+Codebase for https://multipass.run - the marketing website for Canonical's multipass product.
 
 ## Local development
 
