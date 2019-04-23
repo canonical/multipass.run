@@ -1,0 +1,10 @@
+@mixin multipass-p-divider {
+  [class*="mobile-col"],
+  [class*="tablet-col"] {
+    &.p-divider__block {
+      @media (max-width: $breakpoint-medium) {
+        border-top: 0;
+      }
+    }
+  }
+}
