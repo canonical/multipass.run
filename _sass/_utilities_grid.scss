@@ -20,4 +20,11 @@
       margin-left: 0;
     }
   }
+
+  .u-clearfix--medium {
+    @media (max-width: $breakpoint-medium) {
+      clear: both;
+      overflow: hidden;
+    }
+  }
 }
