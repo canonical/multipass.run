@@ -1,0 +1,30 @@
+// XXX Ant: 23.04.19 - Remove once we have a new icon pattern in Vanilla
+@mixin multipass-u-grid-hacks {
+  .u-first-col--small {
+    @media (max-width: $breakpoint-small) {
+      clear: left;
+      margin-left: 0;
+    }
+  }
+
+  .u-first-col--medium {
+    @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+      clear: left;
+      margin-left: 0;
+    }
+  }
+
+  .u-first-col--large {
+    @media (min-width: $breakpoint-medium) {
+      clear: left;
+      margin-left: 0;
+    }
+  }
+
+  .u-clearfix--medium {
+    @media (max-width: $breakpoint-medium) {
+      clear: both;
+      overflow: hidden;
+    }
+  }
+}

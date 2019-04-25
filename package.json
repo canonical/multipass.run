@@ -4,7 +4,7 @@
   "scripts": {
     "test": "sass-lint static/**/*.scss --verbose --no-exit",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle",
-    "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
+    "watch": "watch -p '_sass/*.scss' -c 'yarn run build'",
     "build": "node-sass --include-path node_modules _sass --output css && postcss --use autoprefixer --replace 'css/**/*.css' && postcss --use cssnano --dir static/minified 'css/**/*.css'"
   },
   "repository": {
@@ -24,7 +24,7 @@
     "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "*",
     "npm": "*",
-    "vanilla-framework": "1.8.0",
+    "vanilla-framework": "1.8.1",
     "watch-cli": "^0.2.2",
     "sass-lint": "^1.10.2",
     "postcss-cli": "^4.1.0",

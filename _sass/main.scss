@@ -1,6 +1,11 @@
 @import "settings_colors";
 
 @import "vanilla-framework/scss/build";
+@import "pattern_separator";
+@import "utilities_grid";
+
+@include multipass-u-grid-hacks;
+@include multipass-p-separator;
 
 // XXX Fix for inline image SVGs that do not have dimensions set
 .p-inline-images__item > img {
