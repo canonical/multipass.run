@@ -1,0 +1,208 @@
+---
+layout: default
+page: install
+---
+
+<section class="p-strip--image is-dark" style="background-image: url('https://assets.ubuntu.com/v1/b2c40eef-multipass-hdr.jpg'); background-position: 75% 50%;">
+  <div class="row">
+    <div class="col-8">
+      <h1>Get started with Multipass</h1>
+      <p class="p-heading--four">Installing Multipass is quick and easy. Follow the instructions for the Operating System of your choice and multipass will be available on your command line.</p>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--light is-bordered">
+  <div class="row">
+    <div class="col-12">
+      <h2>Installing Multipass</h2>
+    </div>
+  </div>
+  <div class="row u-equal-height u-hide--small" role="tablist">
+    <a class="col-4 p-card--selection u-align--center"
+      href="#macos-install"
+      role="tab"
+      aria-selected="false"
+      aria-controls="macos-install"
+      id="macos-tab"
+      tabindex="0">
+      <div class="u-sv3">
+        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS" />
+      </div>
+      <p>macOS</p>
+    </a>
+    <a class="col-4 p-card--selection u-align--center"
+      href="#windows-install"
+      role="tab"
+      aria-selected="false"
+      aria-controls="windows-install"
+      id="windows-tab"
+      tabindex="0">
+      <div class="u-sv3">
+        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows" />
+      </div>
+      <p>Windows</p>
+    </a>
+    <a class="col-4 p-card--selection u-align--center"
+      href="#linux-install"
+      role="tab"
+      aria-selected="true"
+      aria-controls="linux-install"
+      id="macos-tab"
+      tabindex="0">
+      <div class="u-sv3">
+        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg?w=123" width="123" alt="Linux" />
+      </div>
+      <p>Linux</p>
+    </a>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div role="tabpanel"
+        aria-hidden="true"
+        id="macos-install"
+        aria-labelledby="macos-tab">
+        <div class="u-hide--large u-hide--medium">
+          <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS" />
+        </div>
+        <p>Requirements:</p>
+        <ul>
+          <li>OS X 10.10.3 Yosemite or later</li>
+          <li>a 2010 or later Mac (i.e. a CPU that supports EPT)</li>
+        </ul>
+        <p>Download the installer, run it and follow the on-screen instructions.</p>
+        <p>Then, start the Terminal app and run <code>multipass help</code> to see the available commands.</p>
+        <p><a href="#" class="p-button--positive">
+          <span class="p-link--external">Download</span>
+        </a></p>
+      </div>
+      <div role="tabpanel"
+        aria-hidden="true"
+        id="windows-install"
+        aria-labelledby="windows-tab">
+        <div class="u-hide--large u-hide--medium">
+          <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows" />
+        </div>
+        <p>Requirements:</p>
+        <ul>
+          <li>Windows 10 Enterprise, Professional or Education</li>
+          <li>A 64-bit CPU that supports virtualization</li>
+          <li>Support for virtualization enabled in your BIOS</li>
+        </ul>
+        <p>Download the installer, run it and follow the on-screen instructions.</p>
+        <p>Then, start the Terminal app or PowerShell and run <code>multipass help</code> to see the available commands.</p>
+        <p><a href="#" class="p-button--positive">
+          <span class="p-link--external">Download</span>
+        </a></p>
+      </div>
+      <div role="tabpanel"
+        aria-hidden="false"
+        id="linux-install"
+        aria-labelledby="linux-tab">
+        <div class="u-hide--large u-hide--medium">
+          <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg?w=123" width="123" alt="Linux" />
+        </div>
+        <p>Requirements:</p>
+        <ul>
+          <li>A Linux distribution with supports for snaps</li>
+          <li>A 64-bit CPU that supports virtualization</li>
+          <li>Support for virtualization enabled in your BIOS</li>
+        </ul>
+        <p>To install, find Multipass in your Software Center or run:</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="snap install multipass" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+        <p>Then, start a terminal of your choice and run <code>multipass help</code> to see the available commands.</p>
+        <p><a href="https://snapcraft.io/multipass" class="p-link--external">Find Multipass on the Snap Store</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip">
+  <div class="row">
+    <div class="col-8 suffix-1">
+      <h2 style="font-weight: 100;">Next steps</h2>
+      <p>Once you have installed Multipass, run <code>multipass find</code> to list the images available, <code>multipass launch</code> to just launch the default one or <code>multipass help</code> to see all the available commands.</p>
+      <p>Multipass is integrated into many workflows and tools that were normally limited only to Linux. Now you can work with Ubuntu without having to adapt your work environment.</p>
+    </div>
+    <div class="col-4">
+      <div class="p-card">
+        <h3>Work with us</h3>
+        <p>We greatly value your feedback. Please <a href="https://github.com/CanonicalLtd/multipass/issues/new" class="p-link--external">file a report on GitHub</a> if you feel something isn't working right or to suggest a workflow we don't support yet. You can also come to <a href="https://webchat.freenode.net/?channels=#multipass" class="p-link--external">#multipass on Freenode</a> or post messages on <a href="https://discourse.ubuntu.com/c/multipass" class="p-link--external">the Ubuntu Discourse</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('[role="tab"]');
+
+  // Add a click listener to all tabs
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', function(e) {
+      let control = this.getAttribute("aria-controls");
+      toogleHandler(control);
+    });
+  };
+
+  function toogleHandler(control) {
+    let tabpanels = document.querySelectorAll('[role="tabpanel"]');
+    let selectedTab = document.querySelector(`[aria-controls="${control}"]`);
+    let selectedPanel = document.getElementById(control);
+
+    // Hide all panels
+    for (var i = 0; i < tabpanels.length; i++) {
+      tabpanels[i].setAttribute('aria-hidden', 'true');
+    }
+
+    // Remove tab highlight
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].setAttribute('aria-selected', 'false');
+    }
+
+    // Select the current tab to selected
+    selectedTab.setAttribute('aria-selected', 'true');
+
+    // Reveal the assosiated tabpanel
+    selectedPanel.setAttribute('aria-hidden', 'false');
+  }
+</script>
+
+<script>
+  const copyToClipboard = str => {
+    const el = document.createElement('textarea'); // Create a <textarea> element
+    el.value = str; // Set its value to the string that you want copied
+    el.setAttribute('readonly', ''); // Make it readonly to be tamper-proof
+    el.style.position = 'absolute';
+    el.style.left = '-9999px'; // Move outside the screen to make it invisible
+    document.body.appendChild(el); // Append the <textarea> element to the HTML document
+    const selected =
+      document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+        ? document.getSelection().getRangeAt(0) // Store selection if found
+        : false; // Mark as false to know no selection existed before
+    el.select(); // Select the <textarea> content
+    document.execCommand('copy'); // Copy - only works as a result of a user action (e.g. click events)
+    document.body.removeChild(el); // Remove the <textarea> element
+    if (selected) {
+      // If a selection existed before copying
+      document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
+      document.getSelection().addRange(selected); // Restore the original selection
+    }
+  };
+
+  var codeSnippetActions = document.querySelectorAll(
+    '.p-code-snippet__action'
+  );
+  for (var codeSnippetAction of codeSnippetActions) {
+    codeSnippetAction.addEventListener(
+      'click',
+      function(e) {
+        const clipboardValue = this.previousSibling.previousSibling.value;
+        copyToClipboard(clipboardValue);
+      },
+      false
+    );
+  }
+</script>

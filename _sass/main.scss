@@ -2,12 +2,30 @@
 
 @import "vanilla-framework/scss/build";
 @import "pattern_separator";
+@import "pattern_card";
 @import "utilities_grid";
 
 @include multipass-u-grid-hacks;
 @include multipass-p-separator;
+@include multipass-p-card;
 
 // XXX Fix for inline image SVGs that do not have dimensions set
 .p-inline-images__item > img {
   width: 100%;
+}
+
+[role='tabpanel'] {
+  &[aria-hidden='true'] {
+    @media (min-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    border-bottom: 1px solid $color-mid-light;
+  }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
 }

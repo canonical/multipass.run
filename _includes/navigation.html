@@ -1,0 +1,26 @@
+<header id="navigation" class="p-navigation">
+  <div class="row">
+    <div class="p-navigation__banner">
+      <div class="p-navigation__logo">
+        <a class="p-navigation__link" href="/">
+          <h4 class="p-navigation__image u-no-margin--bottom">Multipass</h4>
+        </a>
+      </div>
+      <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+      <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+    </div>
+    <nav class="p-navigation__nav" role="menubar">
+      <span class="u-off-screen">
+        <a href="#main-content">Jump to main content</a>
+      </span>
+      <ul class="p-navigation__links" role="menu">
+        <li class="p-navigation__link {% if page.page == 'install' %}is-selected{% endif %}" role="menuitem">
+          <a href="/install">Install</a>
+        </li>
+        <li class="p-navigation__link" role="menuitem">
+          <a href="https://discourse.ubuntu.com/c/multipass" class="p-link--external">Discourse</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
