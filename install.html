@@ -12,10 +12,10 @@ page: install
   </div>
 </section>
 
-<section class="p-strip--light is-bordered">
+<section class="p-strip--light">
   <div class="row">
     <div class="col-12">
-      <h2>Installing Multipass</h2>
+      <h2 style="font-weight: 100;">Installing Multipass</h2>
     </div>
   </div>
   <div class="row u-equal-height u-hide--small" role="tablist">
@@ -128,8 +128,8 @@ page: install
       <p>Multipass is integrated into many workflows and tools that were normally limited only to Linux. Now you can work with Ubuntu without having to adapt your work environment.</p>
     </div>
     <div class="col-4">
-      <div class="p-card">
-        <h3>Work with us</h3>
+      <div class="p-card u-no-margin--bottom">
+        <h3 class="p-heading--four">Work with us</h3>
         <p>We greatly value your feedback. Please <a href="https://github.com/CanonicalLtd/multipass/issues/new" class="p-link--external">file a report on GitHub</a> if you feel something isn't working right or to suggest a workflow we don't support yet. You can also come to <a href="https://webchat.freenode.net/?channels=#multipass" class="p-link--external">#multipass on Freenode</a> or post messages on <a href="https://discourse.ubuntu.com/c/multipass" class="p-link--external">the Ubuntu Discourse</a>.</p>
       </div>
     </div>
@@ -138,6 +138,9 @@ page: install
 
 <script>
   const tabs = document.querySelectorAll('[role="tab"]');
+  let os = 'linux';
+  if (navigator.appVersion.indexOf('Win') != -1) { os = 'windows' };
+  if (navigator.appVersion.indexOf('MacOS') != -1) { os = 'macos' };
 
   // Add a click listener to all tabs
   for (var i = 0; i < tabs.length; i++) {
@@ -148,6 +151,7 @@ page: install
   };
 
   function toogleHandler(control) {
+    console.log(control)
     let tabpanels = document.querySelectorAll('[role="tabpanel"]');
     let selectedTab = document.querySelector(`[aria-controls="${control}"]`);
     let selectedPanel = document.getElementById(control);
@@ -167,6 +171,15 @@ page: install
 
     // Reveal the assosiated tabpanel
     selectedPanel.setAttribute('aria-hidden', 'false');
+  }
+
+  const hash = window.location.hash;
+  if (hash) {
+    toogleHandler(hash.replace('#', ''));
+  } else {
+    if (os != 'linux') {
+      toogleHandler(`${os}-install`);
+    }
   }
 </script>
 
