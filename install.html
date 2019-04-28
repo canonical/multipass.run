@@ -50,8 +50,8 @@ page: install
       aria-controls="linux-install"
       id="macos-tab"
       tabindex="0">
-      <div class="u-sv3">
-        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg?w=123" width="123" alt="Linux" />
+      <div style="padding: 30px 0 50px;">
+        <img src="https://assets.ubuntu.com/v1/a5a05bab-logo-linux.png" alt="Linux" />
       </div>
       <p>Linux</p>
     </a>
@@ -141,6 +141,7 @@ page: install
   let os = 'linux';
   if (navigator.appVersion.indexOf('Win') != -1) { os = 'windows' };
   if (navigator.appVersion.indexOf('MacOS') != -1) { os = 'macos' };
+  if (navigator.appVersion.indexOf('Mac OS') != -1) { os = 'macos' };
 
   // Add a click listener to all tabs
   for (var i = 0; i < tabs.length; i++) {
