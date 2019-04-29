@@ -137,8 +137,8 @@ page: install
 </section>
 
 <script>
-  const tabs = document.querySelectorAll('[role="tab"]');
-  let os = 'linux';
+  var tabs = document.querySelectorAll('[role="tab"]');
+  var os = 'linux';
   if (navigator.appVersion.indexOf('Win') != -1) { os = 'windows' };
   if (navigator.appVersion.indexOf('MacOS') != -1) { os = 'macos' };
   if (navigator.appVersion.indexOf('Mac OS') != -1) { os = 'macos' };
@@ -146,16 +146,15 @@ page: install
   // Add a click listener to all tabs
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', function(e) {
-      let control = this.getAttribute("aria-controls");
+      var control = this.getAttribute("aria-controls");
       toogleHandler(control);
     });
   };
 
   function toogleHandler(control) {
-    console.log(control)
-    let tabpanels = document.querySelectorAll('[role="tabpanel"]');
-    let selectedTab = document.querySelector(`[aria-controls="${control}"]`);
-    let selectedPanel = document.getElementById(control);
+    var tabpanels = document.querySelectorAll('[role="tabpanel"]');
+    var selectedTab = document.querySelector('[aria-controls="' + control + '"]');
+    var selectedPanel = document.getElementById(control);
 
     // Hide all panels
     for (var i = 0; i < tabpanels.length; i++) {
@@ -174,25 +173,25 @@ page: install
     selectedPanel.setAttribute('aria-hidden', 'false');
   }
 
-  const hash = window.location.hash;
+  var hash = window.location.hash;
   if (hash) {
     toogleHandler(hash.replace('#', ''));
   } else {
-    if (os != 'linux') {
+    if (os !== 'linux') {
       toogleHandler(`${os}-install`);
     }
   }
 </script>
 
 <script>
-  const copyToClipboard = str => {
-    const el = document.createElement('textarea'); // Create a <textarea> element
+  var copyToClipboard = function(str) {
+    var el = document.createElement('textarea'); // Create a <textarea> element
     el.value = str; // Set its value to the string that you want copied
     el.setAttribute('readonly', ''); // Make it readonly to be tamper-proof
     el.style.position = 'absolute';
     el.style.left = '-9999px'; // Move outside the screen to make it invisible
     document.body.appendChild(el); // Append the <textarea> element to the HTML document
-    const selected =
+    var selected =
       document.getSelection().rangeCount > 0 // Check if there is any content selected previously
         ? document.getSelection().getRangeAt(0) // Store selection if found
         : false; // Mark as false to know no selection existed before
@@ -213,7 +212,7 @@ page: install
     codeSnippetAction.addEventListener(
       'click',
       function(e) {
-        const clipboardValue = this.previousSibling.previousSibling.value;
+        var clipboardValue = this.previousSibling.previousSibling.value;
         copyToClipboard(clipboardValue);
       },
       false
