@@ -3,6 +3,7 @@ var os = 'linux';
 if (navigator.appVersion.indexOf('Win') != -1) { os = 'windows' };
 if (navigator.appVersion.indexOf('MacOS') != -1) { os = 'macos' };
 if (navigator.appVersion.indexOf('Mac OS') != -1) { os = 'macos' };
+if (navigator.appVersion.indexOf('Macintosh') != -1) { os = 'macos' };
 
 // Add a click listener to all tabs
 for (var i = 0; i < tabs.length; i++) {
