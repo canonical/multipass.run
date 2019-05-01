@@ -1,6 +1,6 @@
 {
-  "name": "multipass.io",
-  "description": "Codebase for https://multipass.io - the marketing website",
+  "name": "multipass.run",
+  "description": "Codebase for https://multipass.run - the marketing website",
   "scripts": {
     "test": "sass-lint static/**/*.scss --verbose --no-exit",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/canonical-websites/multipass.io.git"
+    "url": "git+https://github.com/canonical-web-and-design/multipass.run.git"
   },
   "author": "Barry McGee <barry.mcgee@canonical.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/canonical-websites/multipass.io/issues"
+    "url": "https://github.com/canonical-web-and-design/multipass.run/issues"
   },
-  "homepage": "https://github.com/canonical-websites/multipass.io#readme",
+  "homepage": "https://github.com/canonical-web-and-design/multipass.run#readme",
   "dependencies": {
     "@canonical/global-nav": "2.0.5",
     "browser-sync": "2.18.11",
