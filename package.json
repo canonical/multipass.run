@@ -5,7 +5,8 @@
     "test": "sass-lint static/**/*.scss --verbose --no-exit",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle",
     "watch": "watch -p '_sass/*.scss' -c 'yarn run build'",
-    "build": "node-sass --include-path node_modules _sass --output css && postcss --use autoprefixer --replace 'css/**/*.css' && postcss --use cssnano --dir static/minified 'css/**/*.css'"
+    "build": "node-sass --include-path node_modules _sass --output css && postcss --use autoprefixer --replace 'css/**/*.css' && postcss --use cssnano --dir static/minified 'css/**/*.css' && yarn run copy-3rd-party-js",
+    "copy-3rd-party-js": "mkdir -p js/modules/global-nav && cp node_modules/@canonical/global-nav/dist/index.js js/modules/global-nav"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/canonical-websites/multipass.io#readme",
   "dependencies": {
+    "@canonical/global-nav": "2.0.5",
     "browser-sync": "2.18.11",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.1",
