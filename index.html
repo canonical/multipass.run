@@ -28,7 +28,7 @@ page: home
 
 <section class="p-strip--light" id="features">
   <div class="row">
-    <ul class="p-matrix u-clearfix">
+    <ul class="p-matrix u-clearfix u-no-margin--bottom">
       <li class="p-matrix__item">
         <div class="p-matrix__content">
           <h3 class="p-matrix__title">Ubuntu LTS on demand</h3>
@@ -84,21 +84,21 @@ page: home
   <div class="row">
     <div class="col-4">
       <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows" />
-      <p><a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--positive js-download" data-os="win-win">
+      <p><a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--neutral js-download" data-os="win-win">
         <span class="p-link--external">Download Multipass for Windows</span>
       </a></p>
       <p>Standard MSI installer.</p>
     </div>
     <div class="col-4">
       <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS" />
-      <p><a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--positive js-download" data-os="mac">
+      <p><a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--neutral js-download" data-os="mac">
         <span class="p-link--external">Download Multipass for MacOS</span>
       </a></p>
       <p>DMG install image.</p>
     </div>
     <div class="col-4">
       <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" alt="Linux" style="margin: 27px 0;height: 90px;" />
-      <p><a href="https://snapcraft.io/multipass" class="p-button--positive" data-os="linux">
+      <p><a href="https://snapcraft.io/multipass" class="p-button--neutral js-download" data-os="linux">
         <span class="p-link--external">Install the Multipass snap</span>
       </a></p>
       <p>Ubuntu, Debian, Fedora <a href="https://docs.snapcraft.io/installing-snapd/6735">and more</a>.</p>
@@ -216,4 +216,5 @@ page: home
 </section>
 
 <script src="/js/installversion.js" async></script>
+<script src="/js/osselector.js" async></script>
 <script src="/js/copytoclipboard.js" async></script>
