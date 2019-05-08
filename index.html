@@ -7,7 +7,7 @@ page: home
   <div class="row">
     <div class="col-8">
       <h1>Instant Ubuntu VMs</h1>
-      <p class="p-heading--four">For cloud and Kubernetes developers, turn your workstation into a free mini-cloud with a CLI to launch instances and drive cloud-init.</p>
+      <p class="p-heading--four">A mini-cloud on Mac and Windows workstations.</p>
     </div>
     <div class="col-4 u-hide--small">
       <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" alt="">
@@ -15,90 +15,188 @@ page: home
   </div>
 </section>
 
+<section class="p-strip">
+  <div class="row">
+    <blockquote class="p-pull-quote u-no-margin--bottom">
+      <p style="max-width: none;">Multipass provides a command line interface to launch, manage and generally fiddle about with instances of Linux. The downloading of a minty-fresh image takes a matter of seconds, and within minutes a VM can be up and running.</p>
+      <cite class="p-pull-quote__citation">The Register</cite>
+    </blockquote>
+  </div>
+</section>
+
 <section class="p-strip--light">
   <div class="row">
-    <div class="col-12 u-sv3">
-      <h2 class="p-muted-heading">Features</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-4">
-      <div class="u-sv1">
-        <img src="https://assets.ubuntu.com/v1/aeec264b-green-tick.svg" alt="" />
-      </div>
-      <h3 class="p-heading--four">Develop for Ubuntu</h3>
-      <p>Ubuntu is the leading operating system in the cloud and IoT. With Multipass you can target it directly from your developer OS of choice.</p>
-    </div>
-    <div class="col-4">
-      <div class="u-sv1">
-        <img src="https://assets.ubuntu.com/v1/aeec264b-green-tick.svg" alt="" />
-      </div>
-      <h3 class="p-heading--four">Always up to date</h3>
-      <p>Multipass always uses the newest and most up-to-date image available, and will maintain those you use often.</p>
-    </div>
-    <div class="col-4">
-      <div class="u-sv1">
-        <img src="https://assets.ubuntu.com/v1/aeec264b-green-tick.svg" alt="" />
-      </div>
-      <h3 class="p-heading--four">Easy to use</h3>
-      <p>Getting a new instance is as easy as <code>multipass launch</code>.</p>
-    </div>
+    <ul class="p-matrix u-clearfix">
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <h3 class="p-matrix__title">Ubuntu LTS on demand</h3>
+          <div class="p-matrix__desc">
+            <p>Launch instances of Ubuntu with a single command, and initialize them with standard cloud-init metadata just like on AWS, Azure, Google, IBM and Oracle clouds.</p>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <h3 class="p-matrix__title">Up to date</h3>
+          <div class="p-matrix__desc">
+            <p>Automatically fetch and maintain the newest image available from Canonical. Never waste time on security updates at instance creation time.</p>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <h3 class="p-matrix__title">Pet, and cattle</h3>
+          <p class="p-matrix__desc">Your ‘primary’ instance gets special treatment with long-term integration to your native filesystem and dedicated hot-key access.</p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <h3 class="p-matrix__title">Native hypervisor</h3>
+          <div class="p-matrix__desc">
+            <p>Hyper-V, HyperKit, Virtualbox and KVM are all natively used for the fastest startup time.</p>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <h3 class="p-matrix__title">Optimised guests</h3>
+          <p class="p-matrix__desc">Custom tuned Ubuntu kernel is used for each hypervisor for the best I/O and performance.</p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <h3 class="p-matrix__title">Platform integration</h3>
+          <p class="p-matrix__desc">Share files and folders between your normal home directory and your instances.</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
 <section class="p-strip">
   <div class="row">
-    <div class="col-12">
-      <h2 style="font-weight: 100;">Get started</h2>
-      <p>Multipass is available for <a href="/install#macOS">macOS</a> and <a href="/install#windows">Windows</a>, and the many <a href="/install#snap">Linux distributions</a> that support <a href="https://snapcraft.io/" class="p-link--external">snaps</a>.</p>
-    </div>
-  </div>
-  <div class="row p-divider u-equal-height">
-    <div class="col-10 u-clearfix--medium">
-      <div class="mobile-col-2 tablet-col-2 col-2">
-        <img src="https://assets.ubuntu.com/v1/95b929d4-logo-ubuntu.png" alt="Ubuntu">
-      </div>
-      <div class="mobile-col-2 tablet-col-2 col-2">
-        <img src="https://assets.ubuntu.com/v1/afee3c85-logo-MacOS.png" alt="MacOS">
-      </div>
-      <div class="mobile-col-2 tablet-col-2 col-2 u-first-col--small">
-        <img src="https://assets.ubuntu.com/v1/9522d08d-logo-windows.png" alt="Windows">
-      </div>
-      <div class="mobile-col-2 tablet-col-2 col-2 u-first-col--medium">
-        <img src="https://assets.ubuntu.com/v1/f7f680fb-debian.png" alt="Debian">
-      </div>
-      <div class="mobile-col-2 tablet-col-2 col-2 u-first-col--small">
-        <img src="https://assets.ubuntu.com/v1/f24733d2-fedora.png" alt="Fedora">
-      </div>
-    </div>
-    <div class="col-2 p-divider__block u-vertically-center">
-      <a class="p-link--external" href="https://docs.snapcraft.io/installing-snapd/6735">See all the distributions that run snapd</a>
+    <div class="col-8">
+      <h2 style="font-weight: 100">Install Multipass</h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-8">
-      <p>Once you've installed Multipass, check out <code>multipass find</code> to see what images are available for you and start one via <code>multipass launch</code>. See <code>multipass help</code> for information on all the commands.</p>
-      <p class="u-no-margin--bottom"><a href="/install" class="p-button--positive">Install Multipass now</a></p>
+    <div class="col-4">
+      <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows" />
+      <p><a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--positive js-download" data-os="win-win">
+        <span class="p-link--external">Download Multipass for Windows</span>
+      </a></p>
+      <p>Standard MSI installer.</p>
+    </div>
+    <div class="col-4">
+      <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS" />
+      <p><a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--positive js-download" data-os="mac">
+        <span class="p-link--external">Download Multipass for MacOS</span>
+      </a></p>
+      <p>DMG install image.</p>
+    </div>
+    <div class="col-4">
+      <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" alt="Linux" style="margin: 27px 0;height: 90px;" />
+      <p><a href="https://snapcraft.io/multipass" class="p-button--positive" data-os="linux">
+        <span class="p-link--external">Install the Multipass snap</span>
+      </a></p>
+      <p>Ubuntu, Debian, Fedora <a href="https://docs.snapcraft.io/installing-snapd/6735">and more</a>.</p>
     </div>
   </div>
   <div class="row">
     <hr class="p-separator">
   </div>
   <div class="row">
+    <div class="col-8">
+      <h2 style="font-weight: 100;">Get started</h2>
+      <p>Your first five minutes with Multipass should give you a sense of how much fun it is to have a lightweight cloud handy, free of charge, on your workstation. Let’s launch a few LTS instances, list them, exec a command or script inside the instance, use cloud-init and clean up old instances.</p>
+      <div class="u-sv3">
+        <p>Launch an instance (by default you get the current Ubuntu LTS)</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass launch --name foo" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+      </div>
+      <div class="u-sv3">
+        <p>Run commands in that instance, try running bash (logout or ctrl-d to quit)</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass exec foo lsb_release -a" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+      </div>
+      <div class="u-sv3">
+        <p>Pass a cloud-init metadata file to an instance on launch see <a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">using cloud-init with multipass</a> for more details</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass launch -n bar --cloud-init cloud-config.yaml" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+      </div>
+      <div class="u-sv3">
+        <p>See your instances</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass list" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+      </div>
+      <div class="u-sv3">
+        <p>Stop and start instances</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass stop foo bar" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass start foo" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+      </div>
+      <div class="u-sv3">
+        <p>Clean up what you don’t need</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass delete bar" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass purge" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+      </div>
+      <div class="u-sv3">
+        <p>Find alternate images to launch with multipass</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass find" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+      </div>
+      <div class="u-sv3">
+        <p>Get help</p>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass help" readonly="readonly">
+          <button class="p-code-snippet__action">Copy to clipboard</button>
+        </div>
+        <div class="p-code-snippet">
+          <input class="p-code-snippet__input" value="multipass help <command>" readonly="readonly">
+            <button class="p-code-snippet__action">Copy to clipboard</button>
+          </div>
+        </div>
+        <div class="u-sv3">
+          <p>Now don’t forget you still have ‘foo’ running :)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--light">
+  <div class="row">
     <div class="col-12">
       <h3 class="p-heading--two" style="font-weight: 100;">Learn more</h3>
     </div>
   </div>
   <div class="row p-divider">
-    <div class="col-4 p-divider__block">
+    <div class="col-6 p-divider__block">
       <h4>Documentation</h4>
       <p><a href="https://discourse.ubuntu.com/c/multipass/doc" class="p-link--external">Documentation and guidance on using Multipass</a></p>
     </div>
-    <div class="col-4 p-divider__block">
-      <h4>Using cloud-init</h4>
-      <p><a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass" class="p-link--external">Learn how to use cloud-init with Multipass to customize your instances</a></p>
-    </div>
-    <div class="col-4 p-divider__block">
+    <div class="col-6 p-divider__block">
       <h4>Participate</h4>
       <ul class="p-list">
         <li class="p-list__item">
@@ -108,21 +206,12 @@ page: home
           <a href="https://github.com/CanonicalLtd/multipass" class="p-link--external">Multipass on GitHub</a>
         </li>
         <li class="p-list__item">
-          <a href="https://discourse.ubuntu.com/c/multipass" class="p-link--external">Multipass on Ubuntu discourse</a>
+          <a href="https://discourse.ubuntu.com/c/multipass" class="p-link--external">Multipass Discourse</a>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="p-strip--image is-shallow is-dark" style="background-image: url('https://assets.ubuntu.com/v1/b2c40eef-multipass-hdr.jpg'); background-position: 75% 50%;">
-  <div class="row u-equal-height">
-    <div class="col-8">
-      <h4 class="p-heading--two u-no-margin--bottom" style="font-weight: 100;">Multipass speeds up your development process</h4>
-    </div>
-    <div class="col-4 u-vertically-center u-text-align--right">
-      <br class="u-hide--large u-hide--medium" />
-      <a href="/install" class="p-button--positive u-no-margin--bottom">Launch your first instance now</a>
-    </div>
-  </div>
-</section>
+<script src="/js/installversion.js" async></script>
+<script src="/js/copytoclipboard.js" async></script>
