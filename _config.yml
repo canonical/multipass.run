@@ -1,6 +1,6 @@
 title: Multipass
 email: webteam@canonical.com
-description: > 
+description: >
   It's a system that orchestrates the creation, management and maintenance of
   virtual machines and associated Ubuntu images to simplify development.
 url: "https://multipass.run"
@@ -20,4 +20,3 @@ exclude: [
 ]
 incremental: true
 include: ["_status"]
-
