@@ -23,6 +23,8 @@ function generateDownloadButton(button) {
   var assetInfo = getAssetInfo(os);
   if (assetInfo) {
     button.setAttribute('href', assetInfo.url);
+  }
+  if (version) {
     version.innerText = assetInfo.name;
   }
 }
