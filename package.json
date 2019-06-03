@@ -19,25 +19,25 @@
   },
   "homepage": "https://github.com/canonical-web-and-design/multipass.run#readme",
   "dependencies": {
-    "@canonical/global-nav": "2.0.5",
-    "browser-sync": "2.18.11",
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "3.1.1",
-    "gulp-sass": "2.3.2",
+    "@canonical/global-nav": "2.1.0",
+    "browser-sync": "2.26.5",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "6.1.0",
+    "gulp-sass": "4.0.2",
     "gulp-sourcemaps": "*",
     "npm": "*",
     "vanilla-framework": "1.8.1",
     "watch-cli": "0.2.3",
-    "sass-lint": "1.10.2",
-    "postcss-cli": "4.1.1",
-    "node-sass": "4.5.3",
-    "cssnano": "3.10.0",
-    "autoprefixer": "6.7.7"
+    "sass-lint": "1.13.1",
+    "postcss-cli": "6.1.2",
+    "node-sass": "4.12.0",
+    "cssnano": "4.1.10",
+    "autoprefixer": "9.5.1"
   },
   "devDependencies": {
     "gulp-gh-pages": "0.5.4",
-    "gulp-uglify": "1.5.4",
-    "sass-lint": "1.10.2",
-    "node-sass": "4.5.3"
+    "gulp-uglify": "3.0.2",
+    "sass-lint": "1.13.1",
+    "node-sass": "4.12.0"
   }
 }
