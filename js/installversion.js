@@ -36,7 +36,7 @@ function getAssetInfo(os) {
     var assets = release.assets;
     for (var q = 0; q < assets.length; q++) {
       var asset = assets[q];
-      if (asset.name.includes(os) && release.target_commitish == 'master') {
+      if (asset.name.includes(os) && !release.prerelease) {
         if (asset.browser_download_url && release.tag_name) {
           return {
             url: asset.browser_download_url,
