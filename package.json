@@ -6,6 +6,7 @@
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle",
     "watch": "watch -p '_sass/*.scss' -c 'yarn run build'",
     "build": "node-sass --include-path node_modules _sass --output css && postcss --use autoprefixer --replace 'css/**/*.css' && postcss --use cssnano --dir static/minified 'css/**/*.css' && yarn run copy-3rd-party-js",
+    "serve": "bundle exec jekyll serve -P ${PORT} -H 0.0.0.0",
     "copy-3rd-party-js": "mkdir -p js/modules/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js js/modules/global-nav"
   },
   "repository": {
