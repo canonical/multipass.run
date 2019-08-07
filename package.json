@@ -30,10 +30,10 @@
     "vanilla-framework": "1.8.1",
     "watch-cli": "0.2.3",
     "sass-lint": "1.13.1",
-    "postcss-cli": "6.1.2",
+    "postcss-cli": "6.1.3",
     "node-sass": "4.12.0",
     "cssnano": "4.1.10",
-    "autoprefixer": "9.6.0"
+    "autoprefixer": "9.6.1"
   },
   "devDependencies": {
     "gulp-gh-pages": "0.5.4",
