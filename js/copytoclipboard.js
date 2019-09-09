@@ -20,7 +20,7 @@ var copyToClipboard = function(str) {
 };
 
 var codeSnippetActions = document.querySelectorAll(
-  '.p-code-snippet__action'
+  '.p-code-copyable__action'
 );
 for (var codeSnippetAction of codeSnippetActions) {
   codeSnippetAction.addEventListener(
