@@ -6739,9 +6739,9 @@ value-or-function@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/value-or-function/-/value-or-function-3.0.0.tgz#1c243a50b595c1be54a754bfece8563b9ff8d813"
 
-vanilla-framework@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-2.3.0.tgz#420925e905ce451273bc54c8e5792f58fdd0ddf4"
+vanilla-framework@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-2.4.0.tgz#95fd15738ce72cbb30bb667ba255cc7e9ae3f13d"
 
 vendors@^1.0.0:
   version "1.0.1"
