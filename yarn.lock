@@ -2,9 +2,11 @@
 # yarn lockfile v1
 
 
-"@canonical/global-nav@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-2.1.0.tgz#67b6a499a39ff8135e15fcc6a275cd1e29b504fa"
+"@canonical/global-nav@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-2.3.0.tgz#8a72aa4c82fb61a067454e1102350112ae8d5ba8"
+  dependencies:
+    vanilla-framework "2.4.0"
 
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.1"
@@ -386,16 +388,16 @@ atob@~1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/atob/-/atob-1.1.3.tgz#95f13629b12c3a51a5d215abdce2aa9f32f80773"
 
-autoprefixer@9.7.1:
-  version "9.7.1"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.7.1.tgz#9ffc44c55f5ca89253d9bb7186cefb01ef57747f"
+autoprefixer@9.7.3:
+  version "9.7.3"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.7.3.tgz#fd42ed03f53de9beb4ca0d61fb4f7268a9bb50b4"
   dependencies:
-    browserslist "^4.7.2"
-    caniuse-lite "^1.0.30001006"
+    browserslist "^4.8.0"
+    caniuse-lite "^1.0.30001012"
     chalk "^2.4.2"
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
-    postcss "^7.0.21"
+    postcss "^7.0.23"
     postcss-value-parser "^4.0.2"
 
 autoprefixer@^9.6.1:
@@ -636,13 +638,13 @@ browserslist@^4.6.3:
     electron-to-chromium "^1.3.191"
     node-releases "^1.1.25"
 
-browserslist@^4.7.2:
-  version "4.7.2"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.7.2.tgz#1bb984531a476b5d389cedecb195b2cd69fb1348"
+browserslist@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.8.0.tgz#6f06b0f974a7cc3a84babc2ccc56493668e3c789"
   dependencies:
-    caniuse-lite "^1.0.30001004"
-    electron-to-chromium "^1.3.295"
-    node-releases "^1.1.38"
+    caniuse-lite "^1.0.30001012"
+    electron-to-chromium "^1.3.317"
+    node-releases "^1.1.41"
 
 bs-recipes@1.3.4:
   version "1.3.4"
@@ -787,9 +789,9 @@ caniuse-lite@^1.0.30000980, caniuse-lite@^1.0.30000984:
   version "1.0.30000988"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000988.tgz#742f35ec1b8b75b9628d705d7652eea1fef983db"
 
-caniuse-lite@^1.0.30001004, caniuse-lite@^1.0.30001006:
-  version "1.0.30001006"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001006.tgz#5b6e8288792cfa275f007b2819a00ccad7112655"
+caniuse-lite@^1.0.30001012:
+  version "1.0.30001012"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001012.tgz#653ec635e815b9e0fb801890923b0c2079eb34ec"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1633,9 +1635,9 @@ electron-to-chromium@^1.3.191:
   version "1.3.209"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.209.tgz#cd43879f1d3fb85c75bb843fb11a828570fa1ce4"
 
-electron-to-chromium@^1.3.295:
-  version "1.3.297"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.297.tgz#e28621c1b36c0c4556fdc70b4f4a7fe16a1866e3"
+electron-to-chromium@^1.3.317:
+  version "1.3.319"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.319.tgz#b7d59a93b6959fcf50a526f50ef637d045ebcb19"
 
 encodeurl@~1.0.1:
   version "1.0.1"
@@ -4236,9 +4238,9 @@ node-releases@^1.1.25:
   dependencies:
     semver "^5.3.0"
 
-node-releases@^1.1.38:
-  version "1.1.39"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.39.tgz#c1011f30343aff5b633153b10ff691d278d08e8d"
+node-releases@^1.1.41:
+  version "1.1.41"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.41.tgz#57674a82a37f812d18e3b26118aefaf53a00afed"
   dependencies:
     semver "^6.3.0"
 
@@ -5214,9 +5216,9 @@ postcss@^7.0.17:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^7.0.21:
-  version "7.0.21"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.21.tgz#06bb07824c19c2021c5d056d5b10c35b989f7e17"
+postcss@^7.0.23:
+  version "7.0.23"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.23.tgz#9f9759fad661b15964f3cfc3140f66f1e05eadc1"
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -6814,6 +6816,10 @@ validate-npm-package-name@^3.0.0, validate-npm-package-name@~3.0.0:
 value-or-function@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/value-or-function/-/value-or-function-3.0.0.tgz#1c243a50b595c1be54a754bfece8563b9ff8d813"
+
+vanilla-framework@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-2.4.0.tgz#95fd15738ce72cbb30bb667ba255cc7e9ae3f13d"
 
 vanilla-framework@2.4.1:
   version "2.4.1"
