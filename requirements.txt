@@ -1,0 +1,2 @@
+canonicalwebteam.flask-base==0.3.3
+gunicorn[gevent]

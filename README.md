@@ -1,5 +1,7 @@
 # Multipass
-[![CircleCI build status](https://circleci.com/gh/canonical-web-and-design/multipass.run.svg?style=shield)](https://circleci.com/gh/canonical-web-and-design/multipass.run) [![Code coverage](https://codecov.io/gh/canonical-web-and-design/multipass.run/branch/master/graph/badge.svg)](https://codecov.io/gh/canonical-web-and-design/multipass.run)
+
+[![CircleCI build status](https://circleci.com/gh/canonical-web-and-design/multipass.run.svg?style=shield)](https://circleci.com/gh/canonical-web-and-design/multipass.run)
+[![Code coverage](https://codecov.io/gh/canonical-web-and-design/multipass.run/branch/master/graph/badge.svg)](https://codecov.io/gh/canonical-web-and-design/multipass.run)
 
 Codebase for https://multipass.run - the marketing website for Canonical's multipass product.
 
@@ -15,7 +17,7 @@ Once the containers are setup, you can visit <http://127.0.0.1:8026> in your bro
 
 ### Building CSS
 
-For working on [Sass files](_sass), you may want to dynamically watch for changes to rebuild the CSS whenever something changes.
+For working on [Sass files](static/sass), you may want to dynamically watch for changes to rebuild the CSS whenever something changes.
 
 To setup the watcher, open a new terminal window and run:
 
