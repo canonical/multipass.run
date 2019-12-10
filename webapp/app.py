@@ -1,5 +1,8 @@
-from canonicalwebteam.flask_base.app import FlaskBase
+# Packages
 from flask import render_template
+
+# Local
+from canonicalwebteam.flask_base.app import FlaskBase
 
 
 app = FlaskBase(

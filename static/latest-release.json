@@ -1,0 +1,11 @@
+{
+    "version": "0.9.0",
+    "title": "Multipass 0.9.0 release",
+    "description": "Better desktop integration of the system menu",
+    "download_url": "https://multipass.run/#install",
+    "release_url": "https://github.com/CanonicalLtd/multipass/releases/tag/v0.9.0",
+    "installer_urls": {
+        "windows": "https://github.com/CanonicalLtd/multipass/releases/download/v0.9.0/multipass-0.9.0%2Bwin-win64.exe",
+        "macos": "https://github.com/CanonicalLtd/multipass/releases/download/v0.9.0/multipass-0.9.0%2Bmac-Darwin.pkg"
+    }
+}
