@@ -1,0 +1,13 @@
+{% extends "_layouts/default.html" %}
+
+{% block title %} {{ document.title }} {% endblock %}
+
+{% block content %}
+
+{{ navigation | safe }}
+{{ document.body_html | safe }}
+{{ document.updated }}
+{{ forum_url }}
+{{ document.topic_path }}
+
+{% endblock %}
