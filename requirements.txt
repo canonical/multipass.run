@@ -1,3 +1,2 @@
 canonicalwebteam.flask-base==0.3.3
 canonicalwebteam.discourse-docs==0.6.5
-gunicorn[gevent]
