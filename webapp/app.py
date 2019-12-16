@@ -27,7 +27,7 @@ def index():
 url_prefix = "/docs"
 server_docs_parser = DocParser(
     api=DiscourseAPI(base_url="https://discourse.ubuntu.com/"),
-    index_topic_id=11322,
+    index_topic_id=8294,
     url_prefix=url_prefix,
 )
 server_docs = DiscourseDocs(
