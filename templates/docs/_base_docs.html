@@ -1,22 +1,24 @@
 {% extends "_layouts/default.html" %}
 
 {% block content %}
-<div class="l-documentation">
-  <div class="l-documentation__sidebar">
-    <aside class="p-sidebar" id="navigation">
-      <div class="p-sidebar__banner u-hide--medium u-hide--large">
-        <i class="p-sidebar__toggle p-icon--menu"></i>
-      </div>
-      <div class="p-sidebar__content u-hide--small">
-        <nav class="p-sidebar-nav">
-          {{ navigation | safe }}
-        </nav>
-      </div>
-    </aside>
-  </div>
+<div class="p-strip is-bordered u-no-padding--top u-no-padding--bottom">
+  <div class="l-documentation">
+    <div class="l-documentation__sidebar u-sv3">
+      <aside class="p-sidebar" id="navigation">
+        <div class="p-sidebar__banner u-hide--medium u-hide--large">
+          <i class="p-sidebar__toggle p-icon--menu"></i>
+        </div>
+        <div class="p-sidebar__content u-hide--small">
+          <nav class="p-sidebar-nav">
+            {{ navigation | safe }}
+          </nav>
+        </div>
+      </aside>
+    </div>
 
-  <div class="l-documentation__content p-content">
-    {% block content_docs %}{% endblock %}
+    <div class="l-documentation__content p-content">
+      {% block content_docs %}{% endblock %}
+    </div>
   </div>
 </div>
 
