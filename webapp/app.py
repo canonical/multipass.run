@@ -1,4 +1,3 @@
-
 # Packages
 from flask import render_template
 import talisker.requests
