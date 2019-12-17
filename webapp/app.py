@@ -1,3 +1,5 @@
+import talisker
+
 # Packages
 from flask import render_template
 
@@ -26,7 +28,10 @@ def index():
 
 url_prefix = "/docs"
 server_docs_parser = DocParser(
-    api=DiscourseAPI(base_url="https://discourse.ubuntu.com/"),
+    api=DiscourseAPI(
+        base_url="https://discourse.ubuntu.com/",
+        session=talisker.requests.get_session()
+    ),
     index_topic_id=8294,
     url_prefix=url_prefix,
 )
