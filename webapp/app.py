@@ -1,7 +1,7 @@
-import talisker
 
 # Packages
 from flask import render_template
+import talisker.requests
 
 # Local
 from canonicalwebteam.flask_base.app import FlaskBase
