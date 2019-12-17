@@ -6,8 +6,8 @@ from flask import render_template
 # Local
 from canonicalwebteam.flask_base.app import FlaskBase
 from canonicalwebteam.discourse_docs import (
-    DiscourseDocs,
     DiscourseAPI,
+    DiscourseDocs,
     DocParser,
 )
 
@@ -30,7 +30,7 @@ url_prefix = "/docs"
 server_docs_parser = DocParser(
     api=DiscourseAPI(
         base_url="https://discourse.ubuntu.com/",
-        session=talisker.requests.get_session()
+        session=talisker.requests.get_session(),
     ),
     index_topic_id=8294,
     url_prefix=url_prefix,
