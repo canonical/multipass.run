@@ -1,9 +1,14 @@
 # Packages
 from flask import render_template
+import talisker.requests
 
 # Local
 from canonicalwebteam.flask_base.app import FlaskBase
-
+from canonicalwebteam.discourse_docs import (
+    DiscourseAPI,
+    DiscourseDocs,
+    DocParser,
+)
 
 app = FlaskBase(
     __name__,
@@ -18,3 +23,22 @@ app = FlaskBase(
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+url_prefix = "/docs"
+server_docs_parser = DocParser(
+    api=DiscourseAPI(
+        base_url="https://discourse.ubuntu.com/",
+        session=talisker.requests.get_session(),
+    ),
+    index_topic_id=8294,
+    url_prefix=url_prefix,
+)
+server_docs = DiscourseDocs(
+    parser=server_docs_parser,
+    category_id=24,
+    document_template="/docs/document.html",
+    url_prefix=url_prefix,
+)
+
+server_docs.init_app(app)
