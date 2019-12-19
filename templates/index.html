@@ -114,21 +114,21 @@
         <p>Launch an instance (by default you get the current Ubuntu LTS)</p>
 
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
+          <input class="p-code-copyable__input" value="multipass launch --name ubuntu-lts" readonly="readonly">
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
       </div>
       <div class="u-sv3">
         <p>Run commands in that instance, try running bash (logout or ctrl-d to quit)</p>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="multipass exec foo -- lsb_release -a" readonly="readonly">
+          <input class="p-code-copyable__input" value="multipass exec ubuntu-lts -- lsb_release -a" readonly="readonly">
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
       </div>
       <div class="u-sv3">
         <p>Pass a cloud-init metadata file to an instance on launch see <a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">using cloud-init with multipass</a> for more details</p>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="multipass launch -n bar --cloud-init cloud-config.yaml" readonly="readonly">
+          <input class="p-code-copyable__input" value="multipass launch -n ubuntu-lts-custom --cloud-init cloud-config.yaml" readonly="readonly">
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
       </div>
@@ -142,18 +142,18 @@
       <div class="u-sv3">
         <p>Stop and start instances</p>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="multipass stop foo bar" readonly="readonly">
+          <input class="p-code-copyable__input" value="multipass stop ubuntu-lts ubuntu-lts-custom" readonly="readonly">
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="multipass start foo" readonly="readonly">
+          <input class="p-code-copyable__input" value="multipass start ubuntu-lts" readonly="readonly">
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
       </div>
       <div class="u-sv3">
         <p>Clean up what you don’t need</p>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="multipass delete bar" readonly="readonly">
+          <input class="p-code-copyable__input" value="multipass delete ubuntu-lts-custom" readonly="readonly">
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
         <div class="p-code-copyable">
@@ -180,7 +180,7 @@
           </div>
         </div>
         <div class="u-sv3">
-          <p>Now don’t forget you still have ‘foo’ running :)</p>
+          <p>Now don’t forget you still have ‘ubuntu-lts’ running :)</p>
         </div>
       </div>
     </div>
