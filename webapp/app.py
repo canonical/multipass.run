@@ -31,12 +31,12 @@ server_docs_parser = DocParser(
         base_url="https://discourse.ubuntu.com/",
         session=talisker.requests.get_session(),
     ),
+    category_id=24,
     index_topic_id=8294,
     url_prefix=url_prefix,
 )
 server_docs = DiscourseDocs(
     parser=server_docs_parser,
-    category_id=24,
     document_template="/docs/document.html",
     url_prefix=url_prefix,
 )
