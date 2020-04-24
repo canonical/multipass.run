@@ -1,5 +1,5 @@
 # Packages
-from flask import render_template
+from flask import render_template, request
 import talisker.requests
 
 # Local
@@ -23,6 +23,16 @@ app = FlaskBase(
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+@app.after_request
+def no_cache(response):
+    if request.path == "/static/latest-release.json":
+        response.cache_control.max_age = None
+        response.cache_control.no_store = True
+        response.cache_control.public = False
+
+    return response
 
 
 url_prefix = "/docs"
