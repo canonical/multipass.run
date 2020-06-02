@@ -79,7 +79,6 @@
 
   setupSideNavigation(document.getElementById("drawer"));
 
-  // Add active links to active nav item and scroll to section
   sideNav.querySelectorAll('a').forEach(function(anchor) {
     if (anchor.pathname === location.pathname) {
       anchor.setAttribute('aria-current', 'page');
