@@ -25,6 +25,9 @@ To setup the watcher, open a new terminal window and run:
 ./run watch
 ```
 
+# Deploy
+You can find the deployment config in the deploy folder.
+
 ## Licence
 
 Code licensed [LGPLv3](http://opensource.org/licenses/lgpl-3.0.html) by [Canonical Ltd.](http://www.canonical.com/).
