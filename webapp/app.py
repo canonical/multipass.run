@@ -29,11 +29,11 @@ def index():
 @app.route("/download/<osname>")
 def osredirect(osname):
     if "macos" not in osname and "windows" not in osname:
-        return render_template("index.html")
+        return redirect("/#install", code=301)
 
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    json_url = os.path.join(SITE_ROOT, "../static/", "latest-release.json")
-    release = json.load(open(json_url))
+    json_path = os.path.join(SITE_ROOT, "../static/latest-release.json")
+    release = json.load(open(json_path))
     return redirect(release["installer_urls"][osname], code=302)
 
 
