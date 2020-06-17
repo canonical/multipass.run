@@ -28,7 +28,7 @@ def index():
 
 @app.route("/download/<osname>")
 def osredirect(osname):
-    if "macos" not in osname and "windows" not in osname:
+    if osname not in ("windows", "macos"):
         return redirect("/#install", code=301)
 
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
