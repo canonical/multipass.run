@@ -1,5 +1,6 @@
 # Packages
-from flask import render_template, request
+import os
+from flask import render_template, request, json, redirect
 import talisker.requests
 
 # Local
@@ -23,6 +24,14 @@ app = FlaskBase(
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+@app.route("/download/<regex('windows|macos'):osname>")
+def osredirect(osname):
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_path = os.path.join(SITE_ROOT, "../static/latest-release.json")
+    release = json.load(open(json_path))
+    return redirect(release["installer_urls"][osname], code=302)
 
 
 @app.after_request
