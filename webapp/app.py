@@ -26,11 +26,8 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/download/<osname>")
+@app.route("/download/<regex('windows|macos'):osname>")
 def osredirect(osname):
-    if osname not in ("windows", "macos"):
-        return redirect("/#install", code=301)
-
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_path = os.path.join(SITE_ROOT, "../static/latest-release.json")
     release = json.load(open(json_path))
