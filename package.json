@@ -7,7 +7,9 @@
     "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
     "build": "yarn run build-css && yarn run build-js",
     "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
-    "build-js": "mkdir -p static/js/modules && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/modules/",
+    "build-js": "yarn run copy-cookie-policy && yarn run copy-global-nav",
+    "copy-cookie-policy": "mkdir -p static/js/modules && cp node_modules/@canonical/cookie-policy/build/js/cookie-policy.js static/js/modules",
+    "copy-global-nav": "mkdir -p static/js/modules && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/modules",
     "format-python": "black --line-length 79 webapp",
     "lint-python": "flake8 webapp tests && black --check --line-length 79 webapp tests",
     "lint-scss": "stylelint static/**/*.scss",
@@ -17,6 +19,7 @@
   },
   "dependencies": {
     "@canonical/global-nav": "2.4.3",
+    "@canonical/cookie-policy": "3.0.4",
     "autoprefixer": "10.0.1",
     "node-sass": "4.14.1",
     "postcss": "8.1.1",
