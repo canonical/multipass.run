@@ -20,15 +20,15 @@
   "dependencies": {
     "@canonical/global-nav": "2.4.5",
     "@canonical/cookie-policy": "3.1.1",
-    "autoprefixer": "10.0.1",
+    "autoprefixer": "10.2.0",
     "node-sass": "4.14.1",
-    "postcss": "8.1.1",
-    "postcss-cli": "8.1.0",
+    "postcss": "8.2.2",
+    "postcss-cli": "8.3.1",
     "vanilla-framework": "2.21.0",
     "watch-cli": "0.2.3"
   },
   "devDependencies": {
-    "stylelint": "13.7.2",
+    "stylelint": "13.8.0",
     "stylelint-config-standard": "20.0.0",
     "stylelint-order": "4.1.0"
   }
