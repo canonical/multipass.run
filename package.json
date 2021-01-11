@@ -21,7 +21,7 @@
     "@canonical/global-nav": "2.4.5",
     "@canonical/cookie-policy": "3.1.1",
     "autoprefixer": "10.2.1",
-    "node-sass": "4.14.1",
+    "node-sass": "5.0.0",
     "postcss": "8.2.4",
     "postcss-cli": "8.3.1",
     "vanilla-framework": "2.21.0",
