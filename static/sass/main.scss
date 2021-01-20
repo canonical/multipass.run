@@ -5,8 +5,10 @@
 @import "@canonical/cookie-policy/build/css/cookie-policy";
 
 //import additional styles
+@import "pattern_strip.scss";
 @import "pattern_github_buttons";
 
+@include multipass-p-strip;
 @include multipass-github-buttons;
 
 //Custom styles
