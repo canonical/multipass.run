@@ -1,14 +1,15 @@
 function setupTabs() {
   var tabs = document.querySelectorAll(".js-tab");
 
-  for (var i = 0; i < tabs.length; i += 1) {
-    var tab = tabs[i];
-    var tabSelector = tab.getAttribute("href");
-    var tabContent = document.querySelector(tabSelector);
+  tabs.forEach((tab) => {
+    const tabSelector = tab.getAttribute("href");
+    const tabContent = document.querySelector(tabSelector);
 
     if (tabContent) {
       tab.setAttribute("aria-selected", "false");
-      tabContent.classList.add("u-hide");
+      if (tabContent.id !== "tab-one__content") {
+        tabContent.classList.add("u-hide");
+      }
 
       tab.addEventListener("click", function (e) {
         e.preventDefault();
@@ -16,7 +17,7 @@ function setupTabs() {
         toggleTab(e.currentTarget);
       });
     }
-  }
+  });
 
   function toggleTab(tab) {
     var tabSelector = tab.getAttribute("href");
