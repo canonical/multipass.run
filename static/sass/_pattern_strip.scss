@@ -13,7 +13,8 @@
     @extend %vf-strip;
 
     background-blend-mode: multiply, multiply, normal, normal, normal;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         to bottom right,
         rgba(228, 228, 228, 0.54) 0%,
         rgba(228, 228, 228, 0.54) 49.9%,
@@ -40,8 +41,10 @@
         rgba(255, 255, 255, 1) 100%
       ),
       linear-gradient(-89deg, #e95420 0%, #772953 38%, #2c001e 85%);
+
     @supports not (background-blend-mode: multiply) {
-      background-image: linear-gradient(
+      background-image:
+        linear-gradient(
           to bottom right,
           rgba(228, 228, 228, 0.14) 0%,
           rgba(228, 228, 228, 0.14) 49.9%,
@@ -70,10 +73,18 @@
         linear-gradient(-89deg, #e95420 0%, #772953 38%, #2c001e 85%);
     }
 
-    background-position: 0% 0%, top right, right 0 bottom 4rem, right bottom,
+    background-position:
+      0% 0%,
+      top right,
+      right 0 bottom 4rem,
+      right bottom,
       0% 0%;
     background-repeat: no-repeat;
-    background-size: 100% calc(100% - 4rem), 50% 100%, 100% 4rem, 100% 4.1rem,
+    background-size:
+      100% calc(100% - 4rem),
+      50% 100%,
+      100% 4rem,
+      100% 4.1rem,
       auto;
     margin-bottom: -4rem;
     overflow: hidden;
@@ -91,20 +102,36 @@
     &.is-deep {
       $padding: 3rem;
 
-      background-position: 0% 0%, top right, right 0 bottom $padding,
-        right bottom, 0% 0%;
-      background-size: 100% calc(100% - #{$padding}), 100% 100%, 100% $padding,
-        100% $padding, auto;
+      background-position:
+        0% 0%,
+        top right,
+        right 0 bottom $padding,
+        right bottom,
+        0% 0%;
+      background-size:
+        100% calc(100% - #{$padding}),
+        100% 100%,
+        100% $padding,
+        100% $padding,
+        auto;
       margin-bottom: -$padding;
       padding-bottom: ($padding * 3) !important;
 
       @media (min-width: $breakpoint-medium) {
         $padding: 6rem;
 
-        background-position: 0% 0%, top right, right 0 bottom $padding,
-          right bottom, 0% 0%;
-        background-size: 100% calc(100% - #{$padding}), 50% 100%, 100% $padding,
-          100% $padding, auto;
+        background-position:
+          0% 0%,
+          top right,
+          right 0 bottom $padding,
+          right bottom,
+          0% 0%;
+        background-size:
+          100% calc(100% - #{$padding}),
+          50% 100%,
+          100% $padding,
+          100% $padding,
+          auto;
         margin-bottom: -$padding;
         padding-bottom: ($padding * 3) !important;
       }
@@ -115,7 +142,8 @@
     @extend %vf-strip;
 
     background-blend-mode: multiply, multiply, normal, normal, normal;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         to bottom right,
         rgba(228, 228, 228, 0.54) 0%,
         rgba(228, 228, 228, 0.54) 49.9%,
@@ -137,8 +165,10 @@
         rgba(255, 255, 255, 0) 100%
       ),
       linear-gradient(-89deg, #e95420 0%, #772953 38%, #2c001e 85%);
+
     @supports not (background-blend-mode: multiply) {
-      background-image: linear-gradient(
+      background-image:
+        linear-gradient(
           to bottom right,
           rgba(228, 228, 228, 0.14) 0%,
           rgba(228, 228, 228, 0.14) 49.9%,
@@ -164,7 +194,7 @@
 
     background-position: 0% 0%, top right, right bottom, 0% 0%;
     background-repeat: no-repeat;
-    background-size: 100% 100%, 50% 100%, 100% 4.2rem, auto;
+    background-size: 100% 100%, 50% 100%, 100% 4.1rem, auto;
     color: $color-x-light;
     padding-bottom: 6rem;
   }

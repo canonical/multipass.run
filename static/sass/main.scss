@@ -13,6 +13,17 @@
 
 //Custom styles
 
+.p-tab {
+  color: $color-mid-dark;
+
+  &:focus,
+  &:hover,
+  &.active {
+    background-color: $color-light;
+    text-decoration: none;
+  }
+}
+
 .p-navigation__banner {
   background-color: $color-brand;
 }
