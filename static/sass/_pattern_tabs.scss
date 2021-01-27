@@ -1,0 +1,12 @@
+@mixin multipass-p-tabs {
+  .p-tab {
+    color: $color-mid-dark;
+
+    &:focus,
+    &:hover,
+    &.active {
+      background-color: $color-light;
+      text-decoration: none;
+    }
+  }
+}

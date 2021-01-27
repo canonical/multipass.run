@@ -6,9 +6,11 @@ function setupTabs() {
     const tabContent = document.querySelector(tabSelector);
 
     if (tabContent) {
-      tab.setAttribute("aria-selected", "false");
       if (tabContent.id !== "tab-one__content") {
         tabContent.classList.add("u-hide");
+        tab.setAttribute("aria-selected", "false");
+      } else {
+        tab.setAttribute("aria-selected", "true");
       }
 
       tab.addEventListener("click", function (e) {
@@ -16,6 +18,8 @@ function setupTabs() {
         e.stopPropagation();
         toggleTab(e.currentTarget);
       });
+    } else {
+      console.warn("Tab content does not exist");
     }
   });
 
