@@ -4,7 +4,9 @@
   "scripts": {
     "start": "yarn run build & yarn run serve",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle",
-    "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
+    "watch": "yarn run watch-css & yarn run watch-js",
+    "watch-css": "watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
+    "watch-js": "watch -p 'static/js/**/*.js' -c 'yarn run build-js'",
     "build": "yarn run build-css && yarn run build-js",
     "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
     "build-js": "yarn run copy-cookie-policy && yarn run copy-global-nav",
@@ -24,14 +26,14 @@
     "node-sass": "5.0.0",
     "postcss": "8.2.4",
     "postcss-cli": "8.3.1",
-    "vanilla-framework": "2.22.0",
-    "watch-cli": "0.2.3"
+    "vanilla-framework": "2.22.0"
   },
   "devDependencies": {
     "prettier": "2.2.1",
     "stylelint": "13.8.0",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-standard": "20.0.0",
-    "stylelint-order": "4.1.0"
+    "stylelint-order": "4.1.0",
+    "watch-cli": "0.2.3"
   }
 }
