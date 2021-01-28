@@ -1,5 +1,16 @@
-@import 'settings_colors';
-@import 'vanilla-framework/scss/build';
+@import "settings_colors";
+@import "vanilla-framework/scss/build";
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
+
+//import additional styles
+@import "pattern_github_buttons";
+@import "pattern_navigation";
+@import "pattern_strip";
+@import "pattern_tabs";
+
+@include multipass-github-buttons;
+@include multipass-p-navigation;
+@include multipass-p-strip;
+@include multipass-p-tabs;
