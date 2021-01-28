@@ -9,7 +9,7 @@ Codebase for https://multipass.run - the marketing website for Canonical's multi
 
 The simplest way to run the site locally is to first [install Docker](https://docs.docker.com/engine/installation/) (on Linux you may need to [add your user to the `docker` group](https://docs.docker.com/engine/installation/linux/linux-postinstall/)), and then use the `./run` script:
 
-``` bash
+```bash
 ./run
 ```
 
@@ -21,11 +21,12 @@ For working on [Sass files](static/sass), you may want to dynamically watch for 
 
 To setup the watcher, open a new terminal window and run:
 
-``` bash
+```bash
 ./run watch
 ```
 
 # Deploy
+
 You can find the deployment config in the deploy folder.
 
 ## Licence

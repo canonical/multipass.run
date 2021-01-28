@@ -7,8 +7,7 @@
     @extend %vf-strip;
 
     background-blend-mode: multiply, multiply, normal, normal, normal;
-    background-image:
-      linear-gradient(
+    background-image: linear-gradient(
         to bottom right,
         rgba(228, 228, 228, 0.54) 0%,
         rgba(228, 228, 228, 0.54) 49.9%,
@@ -32,8 +31,7 @@
       linear-gradient(-89deg, #e95420 0%, #772953 38%, #2c001e 85%);
 
     @supports not (background-blend-mode: multiply) {
-      background-image:
-        linear-gradient(
+      background-image: linear-gradient(
           to bottom right,
           rgba(228, 228, 228, 0.14) 0%,
           rgba(228, 228, 228, 0.14) 49.9%,

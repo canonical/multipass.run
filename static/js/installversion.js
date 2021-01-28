@@ -1,15 +1,15 @@
-var api = 'https://api.github.com/repos/CanonicalLtd/multipass/releases';
-var downloadButtons = document.querySelectorAll('.js-download');
-var json = '';
+var api = "https://api.github.com/repos/CanonicalLtd/multipass/releases";
+var downloadButtons = document.querySelectorAll(".js-download");
+var json = "";
 
 fetch(api)
-.then(function(response) {
-  return response.json();
-})
-.then(function(myJson) {
-  json = myJson;
-  setupDownloadButtons();
-});
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (myJson) {
+    json = myJson;
+    setupDownloadButtons();
+  });
 
 function setupDownloadButtons() {
   for (var i = 0; i < downloadButtons.length; i++) {
@@ -19,10 +19,10 @@ function setupDownloadButtons() {
 
 function generateDownloadButton(button) {
   var os = button.dataset.os;
-  var version = button.querySelector('.js-version');
+  var version = button.querySelector(".js-version");
   var assetInfo = getAssetInfo(os);
   if (assetInfo) {
-    button.setAttribute('href', assetInfo.url);
+    button.setAttribute("href", assetInfo.url);
   }
   if (version) {
     version.innerText = assetInfo.name;
@@ -40,8 +40,8 @@ function getAssetInfo(os) {
         if (asset.browser_download_url && release.tag_name) {
           return {
             url: asset.browser_download_url,
-            name: release.tag_name
-          }
+            name: release.tag_name,
+          };
         } else {
           return false;
         }
