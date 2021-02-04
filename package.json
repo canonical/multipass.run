@@ -8,7 +8,7 @@
     "watch-css": "watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
     "watch-js": "watch -p 'static/js/**/*.js' -c 'yarn run build-js'",
     "build": "yarn run build-css && yarn run build-js",
-    "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
+    "build-css": "sass static/sass/main.scss static/css/main.css --load-path=node_modules --style=compressed && postcss --no-map --use autoprefixer --replace 'static/css/**/*.css'",
     "build-js": "yarn run copy-cookie-policy && yarn run copy-global-nav",
     "copy-cookie-policy": "mkdir -p static/js/modules && cp node_modules/@canonical/cookie-policy/build/js/cookie-policy.js static/js/modules",
     "copy-global-nav": "mkdir -p static/js/modules && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/modules",
@@ -23,7 +23,7 @@
     "@canonical/cookie-policy": "3.1.2",
     "@canonical/global-nav": "2.4.5",
     "autoprefixer": "10.2.1",
-    "node-sass": "5.0.0",
+    "sass": "1.27.0",
     "postcss": "8.2.4",
     "postcss-cli": "8.3.1",
     "vanilla-framework": "2.22.0"
