@@ -11,6 +11,10 @@ from canonicalwebteam.discourse_docs import (
     DocParser,
 )
 
+CAPTCHA_API_KEY = os.getenv(
+    "CAPTCHA_API_KEY", "6LfYBloUAAAAAINm0KzbEv6TP0boLsTEzpdrB8if"
+)
+
 app = FlaskBase(
     __name__,
     "multipass.run",
@@ -19,6 +23,14 @@ app = FlaskBase(
     template_404="404.html",
     template_500="500.html",
 )
+
+
+# Template context
+@app.context_processor
+def context():
+    return {
+        "CAPTCHA_API_KEY": CAPTCHA_API_KEY,
+    }
 
 
 @app.route("/")
