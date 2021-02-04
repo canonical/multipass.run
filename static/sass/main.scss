@@ -5,11 +5,13 @@
 @import "@canonical/cookie-policy/build/css/cookie-policy";
 
 //import additional styles
+@import "pattern_contact-modal";
 @import "pattern_github_buttons";
 @import "pattern_navigation";
 @import "pattern_strip";
 @import "pattern_tabs";
 
+@include multipass-p-contact-modal;
 @include multipass-github-buttons;
 @include multipass-p-navigation;
 @include multipass-p-strip;
