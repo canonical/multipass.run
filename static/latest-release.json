@@ -5,7 +5,7 @@
   "download_url": "https://multipass.run/#install",
   "release_url": "https://github.com/CanonicalLtd/multipass/releases/tag/v1.6.2",
   "installer_urls": {
-    "windows": "https://github.com/CanonicalLtd/multipass/releases/download/v1.6.2/multipass-1.5.0%2Bwin-win64.exe",
-    "macos": "https://github.com/CanonicalLtd/multipass/releases/download/v1.6.2/multipass-1.5.0%2Bmac-Darwin.pkg"
+    "windows": "https://github.com/CanonicalLtd/multipass/releases/download/v1.6.2/multipass-1.6.2%2Bwin-win64.exe",
+    "macos": "https://github.com/CanonicalLtd/multipass/releases/download/v1.6.2/multipass-1.6.2%2Bmac-Darwin.pkg"
   }
 }
