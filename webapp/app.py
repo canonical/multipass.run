@@ -10,6 +10,8 @@ from canonicalwebteam.discourse_docs import (
     DiscourseDocs,
     DocParser,
 )
+from canonicalwebteam.search import build_search_view
+
 
 CAPTCHA_API_KEY = os.getenv(
     "CAPTCHA_API_KEY", "6LfYBloUAAAAAINm0KzbEv6TP0boLsTEzpdrB8if"
@@ -73,3 +75,11 @@ server_docs = DiscourseDocs(
 )
 
 server_docs.init_app(app)
+
+app.add_url_rule(
+    "/docs/search",
+    "docs-search",
+    build_search_view(
+        site="multipass.run/docs", template_path="docs/search.html"
+    ),
+)

@@ -85,12 +85,12 @@ jobs:
         run: sudo pip3 install coverage
 
       - name: Install node dependencies
-        run: yarn install --immutable
+        run: yarn install
 
       - name: Build resources
         run: yarn build
 
       - name: Run tests with coverage
         run: |
-          coverage run  --source=. -m unittest discover tests
+          coverage run --source=. -m unittest discover tests
           bash <(curl -s https://codecov.io/bash) -cF python

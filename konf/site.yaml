@@ -5,6 +5,12 @@ image: prod-comms.docker-registry.canonical.com/multipass.run
 env:
   - name: SENTRY_DSN
     value: https://a08a5f107a674535ad7637c82265f977@sentry.is.canonical.com//34
+  
+  - name: SEARCH_API_KEY
+    secretKeyRef:
+      key: google-custom-search-key
+      name: google-api
+
 
 useProxy: false
 
