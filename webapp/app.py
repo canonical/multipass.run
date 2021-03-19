@@ -26,6 +26,8 @@ app = FlaskBase(
     template_500="500.html",
 )
 
+session = talisker.requests.get_session()
+
 
 # Template context
 @app.context_processor
@@ -62,7 +64,7 @@ url_prefix = "/docs"
 server_docs_parser = DocParser(
     api=DiscourseAPI(
         base_url="https://discourse.ubuntu.com/",
-        session=talisker.requests.get_session(),
+        session=session,
     ),
     category_id=24,
     index_topic_id=8294,
@@ -80,6 +82,8 @@ app.add_url_rule(
     "/docs/search",
     "docs-search",
     build_search_view(
-        site="multipass.run/docs", template_path="docs/search.html"
+        session=session,
+        site="multipass.run/docs",
+        template_path="docs/search.html",
     ),
 )
