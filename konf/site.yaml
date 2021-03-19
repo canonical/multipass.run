@@ -2,6 +2,8 @@ domain: multipass.run
 
 image: prod-comms.docker-registry.canonical.com/multipass.run
 
+useProxy: true
+
 env:
   - name: SENTRY_DSN
     value: https://a08a5f107a674535ad7637c82265f977@sentry.is.canonical.com//34
@@ -10,9 +12,6 @@ env:
     secretKeyRef:
       key: google-custom-search-key
       name: google-api
-
-
-useProxy: false
 
 # Overrides for production
 production:
