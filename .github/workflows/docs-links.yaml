@@ -15,7 +15,7 @@ jobs:
         run: sudo pip install LinkChecker
 
       - name: Run linkchecker
-        run: linkchecker --threads 2 --ignore-url "https://assets.ubuntu.com$" --check-extern --no-warnings https://multipass.run/docs
+        run: linkchecker --threads 2 --ignore-url "http://localhost*" --ignore-url "https://assets.ubuntu.com$" --check-extern --no-warnings https://multipass.run/docs
 
       - name: Send message on failure
         if: failure()
