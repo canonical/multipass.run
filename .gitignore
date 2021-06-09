@@ -70,3 +70,5 @@ build/
 dist/
 
 static/js/modules
+
+.dotrun.json
