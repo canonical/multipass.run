@@ -10,7 +10,7 @@ RUN --mount=type=cache,target=/root/.cache/pip pip3 install --user --requirement
 
 # Build stage: Install yarn dependencies
 # ===
-FROM node:12-slim AS yarn-dependencies
+FROM node:12 AS yarn-dependencies
 WORKDIR /srv
 ADD package.json .
 RUN --mount=type=cache,target=/usr/local/share/.cache/yarn yarn install
@@ -59,4 +59,3 @@ ENV TALISKER_REVISION_ID "${BUILD_ID}"
 # Setup commands to run server
 ENTRYPOINT ["./entrypoint"]
 CMD ["0.0.0.0:80"]
-
