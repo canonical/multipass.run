@@ -1,11 +1,11 @@
 {
-  "version": "1.6.2",
-  "title": "New Multipass 1.6.2 release",
-  "description": "Now with bridged networking support",
+  "version": "1.7.0",
+  "title": "New Multipass 1.7.0 release",
+  "description": "Workflows, auto-bridges and more...",
   "download_url": "https://multipass.run/#install",
-  "release_url": "https://github.com/CanonicalLtd/multipass/releases/tag/v1.6.2",
+  "release_url": "https://github.com/CanonicalLtd/multipass/releases/tag/v1.7.0",
   "installer_urls": {
-    "windows": "https://github.com/CanonicalLtd/multipass/releases/download/v1.6.2/multipass-1.6.2%2Bwin-win64.exe",
-    "macos": "https://github.com/CanonicalLtd/multipass/releases/download/v1.6.2/multipass-1.6.2%2Bmac-Darwin.pkg"
+    "windows": "https://github.com/CanonicalLtd/multipass/releases/download/v1.7.0/multipass-1.7.0%2Bwin-win64.exe",
+    "macos": "https://github.com/CanonicalLtd/multipass/releases/download/v1.7.0/multipass-1.7.0%2Bmac-Darwin.pkg"
   }
 }
