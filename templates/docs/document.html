@@ -1,42 +1,71 @@
-
 {% extends "_layouts/default.html" %}
 
 {% block title %}{{ document.title }} | Multipass documentation{% endblock %}
 
 {% block content %}
+{% macro create_navigation(nav_items) %}
+  <ul>
+    {% for element in nav_items %}
+    <li>
+      {% if element.navlink_href %}
+        <a href="{{ element.navlink_href }}"
+          {% if request.path == element.navlink_href %}aria-current="page"{% endif %}
+        >{{ element.navlink_text }}</a>
+      {% else %}
+        <strong>{{ element.navlink_text }}</strong>
+      {% endif %}
 
-<section id="search-docs" class="p-strip--light is-shallow">
-  <div class="row">
-    <form class="p-search-box u-no-margin--bottom" action="/docs/search">
-      <input type="search" class="p-search-box__input" name="q" {% if query %}value="{{ query }}"{% endif %} placeholder="Search documentation" required/>
-      <button type="submit" class="p-search-box__button" alt="search"><i class="p-icon--search">Search</i></button>
-    </form>
-  </div>
-</section>
+      {% if element.children %}
+        {{ create_navigation(element.children) }}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
 
-<div class="p-strip is-shallow">
+<section class="p-strip u-extra-space">
   <div class="row">
     <aside class="col-3">
-      <nav class="p-side-navigation--raw-html" id="drawer">
-        <button class="p-side-navigation__toggle js-drawer-toggle" aria-controls="drawer">
-          Toggle side navigation
-        </button>
-        <div class="p-side-navigation__overlay js-drawer-toggle" aria-controls="drawer"></div>
+      {% if versions | length > 1 %}
+      <label for="version-select" class="u-hide">Version</label>
+      <select name="version-select" id="version-select" onChange="window.location.href=this.value">
+      {% for version in versions %}
+        {% set active = docs_version == version['path'] %}
+        <option value="{{ version_paths[version['path']] }}"{% if active %} selected{% endif %}>Version {{ version['version'] }}</option>
+      {% endfor %}
+      <select>
+      {% endif %}
 
+      <nav data-js="navigation" class="p-side-navigation--raw-html" id="{{ navigation['path'] or 'default' }}">
+        <a href="#{{ navigation['path'] or 'default' }}" class="p-side-navigation__toggle js-drawer-toggle" aria-controls="{{ navigation['path'] or 'default' }}">
+          Toggle side navigation
+        </a>
+        <div class="p-side-navigation__overlay js-drawer-toggle" aria-controls="{{ navigation['path'] or 'default' }}"></div>
         <div class="p-side-navigation__drawer">
           <div class="p-side-navigation__drawer-header">
-            <button class="p-side-navigation__toggle--in-drawer js-drawer-toggle" aria-controls="drawer">
+            <a href="#" class="p-side-navigation__toggle--in-drawer js-drawer-toggle" aria-controls="{{ navigation['path'] or 'default' }}">
               Toggle side navigation
-            </button>
+            </a>
           </div>
-          {{ navigation | safe }}
+          {% for nav_group in navigation.nav_items %}
+            {% if nav_group.navlink_href %}
+              <h3>
+                <a
+                  class="p-link--soft"
+                  href="{{ nav_group.navlink_href }}"
+                  {% if request.path == nav_group.navlink_href %}aria-current="page"{% endif %}
+                >{{ nav_group.navlink_text }}</a>
+            </h3>
+            {% elif nav_group.navlink_text %}
+               <h3>{{ nav_group.navlink_text }}</h3>
+            {% endif %}
+            {{ create_navigation(nav_group.children) }}
+          {% endfor %}
         </div>
       </nav>
     </aside>
-
     <main class="col-9" id="main-content">
       <h1>{{ document.title }}</h1>
-      <hr />
       {{ document.body_html | safe }}
       <hr />
       <p><i>Last updated {{ document.updated }}.</i></p>
@@ -47,53 +76,7 @@
       </div>
     </main>
   </div>
-</div>
+</section>
 
-<script>
-  /**
-    Toggles the expanded/collapsed classed on side navigation element.
-    @param {HTMLElement} sideNavigation The side navigation element.
-    @param {Boolean} show Whether to show or hide the drawer.
-  */
-  function toggleDrawer(sideNavigation, show) {
-    if (sideNavigation) {
-      if (show) {
-        sideNavigation.classList.remove('is-collapsed');
-        sideNavigation.classList.add('is-expanded');
-      } else {
-        sideNavigation.classList.remove('is-expanded');
-        sideNavigation.classList.add('is-collapsed');
-      }
-    }
-  }
-
-  /**
-    Attaches event listeners for the side navigation toggles
-    @param {HTMLElement} sideNavigation The side navigation element.
-  */
-  function setupSideNavigation(sideNavigation) {
-    var toggles = [].slice.call(sideNavigation.querySelectorAll('.js-drawer-toggle'));
-
-    toggles.forEach(function (toggle) {
-      toggle.addEventListener('click', function (event) {
-        event.preventDefault();
-        var sideNav = document.getElementById(toggle.getAttribute('aria-controls'));
-
-        if (sideNav) {
-          toggleDrawer(sideNav, !sideNav.classList.contains('is-expanded'));
-        }
-      });
-    });
-  }
-
-  var sideNav = document.getElementById("drawer");
-
-  setupSideNavigation(document.getElementById("drawer"));
-
-  sideNav.querySelectorAll('a').forEach(function(anchor) {
-    if (anchor.pathname === location.pathname) {
-      anchor.setAttribute('aria-current', 'page');
-    }
-  });
-</script>
+<script src="{{ versioned_static('js/prism.js') }}"></script>
 {% endblock %}
