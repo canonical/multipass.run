@@ -5,9 +5,9 @@ import talisker.requests
 
 # Local
 from canonicalwebteam.flask_base.app import FlaskBase
-from canonicalwebteam.discourse_docs import (
+from canonicalwebteam.discourse import (
     DiscourseAPI,
-    DiscourseDocs,
+    Docs,
     DocParser,
 )
 from canonicalwebteam.search import build_search_view
@@ -61,22 +61,20 @@ def no_cache(response):
 
 
 url_prefix = "/docs"
-server_docs_parser = DocParser(
-    api=DiscourseAPI(
-        base_url="https://discourse.ubuntu.com/",
-        session=session,
+main_docs = Docs(
+    parser=DocParser(
+        api=DiscourseAPI(
+            base_url="https://discourse.ubuntu.com/", session=session
+        ),
+        index_topic_id=23650,
+        url_prefix="/docs",
     ),
-    category_id=24,
-    index_topic_id=8294,
-    url_prefix=url_prefix,
+    document_template="docs/document.html",
+    url_prefix="/docs",
+    blueprint_name="main_docs",
 )
-server_docs = DiscourseDocs(
-    parser=server_docs_parser,
-    document_template="/docs/document.html",
-    url_prefix=url_prefix,
-)
+main_docs.init_app(app)
 
-server_docs.init_app(app)
 
 app.add_url_rule(
     "/docs/search",
