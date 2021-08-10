@@ -66,7 +66,7 @@ main_docs = Docs(
         api=DiscourseAPI(
             base_url="https://discourse.ubuntu.com/", session=session
         ),
-        index_topic_id=23650,
+        index_topic_id=8294,
         url_prefix="/docs",
     ),
     document_template="docs/document.html",
