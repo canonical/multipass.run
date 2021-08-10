@@ -1,6 +1,6 @@
 # Packages
 import os
-from flask import render_template, request, json, redirect
+from flask import render_template, request, json, redirect, make_response
 import talisker.requests
 
 # Local
@@ -85,3 +85,21 @@ app.add_url_rule(
         template_path="docs/search.html",
     ),
 )
+
+
+@app.route("/sitemap.xml")
+def sitemap_index():
+    xml_sitemap = render_template("sitemap/sitemap-index.xml")
+    response = make_response(xml_sitemap)
+    response.headers["Content-Type"] = "application/xml"
+
+    return response
+
+
+@app.route("/sitemap-links.xml")
+def sitemap_links():
+    xml_sitemap = render_template("sitemap/sitemap-links.xml")
+    response = make_response(xml_sitemap)
+    response.headers["Content-Type"] = "application/xml"
+
+    return response
