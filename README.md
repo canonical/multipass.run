@@ -1,7 +1,7 @@
 # Multipass
 
 [![CircleCI build status](https://circleci.com/gh/canonical-web-and-design/multipass.run.svg?style=shield)](https://circleci.com/gh/canonical-web-and-design/multipass.run)
-[![Code coverage](https://codecov.io/gh/canonical-web-and-design/multipass.run/branch/master/graph/badge.svg)](https://codecov.io/gh/canonical-web-and-design/multipass.run)
+[![Code coverage](https://codecov.io/gh/canonical-web-and-design/multipass.run/branch/main/graph/badge.svg)](https://codecov.io/gh/canonical-web-and-design/multipass.run)
 
 Codebase for https://multipass.run - the marketing website for Canonical's multipass product.
 
