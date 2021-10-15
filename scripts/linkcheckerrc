@@ -1,0 +1,13 @@
+[checking]
+maxrequestspersecond=5
+
+[filtering]
+nofollow=!https:\/\/multipass\.run\/docs\/
+checkextern=1
+ignore=
+  https://assets\.ubuntu\.com
+  https://localhost\*
+
+[output]
+status=0
+warnings=0
