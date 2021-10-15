@@ -2,11 +2,10 @@ name: docs links on multipass.run/docs
 
 on:
   schedule:
-    - cron: "0 13 * * 1"
+    - cron: "0 13 * * *"
 
 jobs:
   check-links:
-    if: github.repository == 'canonical-web-and-design/multipass.run'
     runs-on: ubuntu-latest
 
     steps:
@@ -16,9 +15,22 @@ jobs:
       - name: Install linkchecker
         run: sudo pip install LinkChecker
 
+      - name: Write linkchecker config file
+        run: |
+          mkdir -p ~/.linkchecker
+          cp scripts/linkcheckerrc ~/.linkchecker/
+
       - name: Run linkchecker
-        run: linkchecker --threads 2 --ignore-url "http://localhost*" --ignore-url "https://assets.ubuntu.com$" --check-extern --no-warnings https://multipass.run/docs
+        run: linkchecker https://multipass.run/docs > ~/.linkchecker/linkchecker-out.txt
+
+      - name: Parse linkchecker output
+        run: scripts/parseDocsLinkcheckerOutput
 
       - name: Send message on failure
         if: failure()
-        run: curl -X POST -F "workflow=${GITHUB_WORKFLOW}" -F "repo_name=${GITHUB_REPOSITORY}" -F "action_id=${GITHUB_RUN_ID}" ${{ secrets.BOT_URL }}?room=docs
+        run: |
+          curl -X POST \
+          -F "workflow=${GITHUB_WORKFLOW}" \
+          -F "repo_name=${GITHUB_REPOSITORY}" \
+          -F "action_id=${GITHUB_RUN_ID}" \
+          ${{ secrets.BOT_URL }}?room=docs
