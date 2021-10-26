@@ -1,11 +1,11 @@
 {
-  "version": "1.7.2",
-  "title": "New Multipass 1.7.2 release",
-  "description": "Ubuntu Hirsute support, macOS security fix.",
+  "version": "1.8.0",
+  "title": "New Multipass 1.8.0 release",
+  "description": "Apple M1 and Ubuntu Impish support, aliases.",
   "download_url": "https://multipass.run/#install",
-  "release_url": "https://github.com/CanonicalLtd/multipass/releases/tag/v1.7.2",
+  "release_url": "https://github.com/canonical/multipass/releases/tag/v1.8.0",
   "installer_urls": {
-    "windows": "https://github.com/CanonicalLtd/multipass/releases/download/v1.7.2/multipass-1.7.2%2Bwin-win64.exe",
-    "macos": "https://github.com/CanonicalLtd/multipass/releases/download/v1.7.2/multipass-1.7.2%2Bmac-Darwin.pkg"
+    "windows": "https://github.com/canonical/multipass/releases/download/v1.8.0/multipass-1.8.0%2Bwin-win64.exe",
+    "macos": "https://github.com/canonical/multipass/releases/download/v1.8.0/multipass-1.8.0%2Bmac-Darwin.pkg"
   }
 }
