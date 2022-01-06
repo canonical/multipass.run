@@ -1,7 +1,8 @@
 name: docs links on multipass.run/docs
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 13 * * *"
 
 jobs:
   check-links:
