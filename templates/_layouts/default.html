@@ -49,12 +49,12 @@
         <span class="u-off-screen">
           <a href="#main-content">Jump to main content</a>
         </span>
-        <ul class="p-navigation__links" role="menu">
-          <li class="p-navigation__link {% if '/docs' in request.path %}is-selected{% endif %}" role="menuitem">
-            <a href="/docs">Docs</a>
+        <ul class="p-navigation__items" role="menu">
+          <li class="p-navigation__item {% if '/docs' in request.path %}is-selected{% endif %}" role="menuitem">
+            <a class="p-navigation__link" href="/docs">Docs</a>
           </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a href="https://discourse.ubuntu.com/c/multipass" class="p-link--external">Discourse</a>
+          <li class="p-navigation__item" role="menuitem">
+            <a class="p-navigation__link" href="https://discourse.ubuntu.com/c/multipass" class="p-link--external">Discourse</a>
           </li>
         </ul>
         <div class="p-github-buttons">
