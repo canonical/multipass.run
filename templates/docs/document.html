@@ -16,7 +16,11 @@
       {% endif %}
 
       {% if expandable %}
-        {% if element.children and (element.is_active or element.has_active_child) %}
+        {% if element.navlink_href %}
+          {% if element.children and (element.is_active or element.has_active_child) %}
+            {{ create_navigation(element.children, True) }}
+          {% endif %}
+        {% else %}
           {{ create_navigation(element.children, True) }}
         {% endif %}
       {% else %}
