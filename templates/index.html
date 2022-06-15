@@ -1,11 +1,15 @@
 {% extends "_layouts/default.html" %}
 
+{% block meta_description %}Multipass is a CLI to launch and manage VMs on Windows, Mac and Linux that simulates a cloud environment with support for cloud-init. Get Ubuntu on-demand with clean integration to your IDE and version control on your native platform.
+{% endblock meta_description %}
+
 {% block content %}
 <section class="p-strip--suru">
   <div class="row">
     <div class="col-6">
       <h1>Ubuntu VMs on demand for any workstation</h1>
-      <p>Get an instant Ubuntu VM with a single command.  Multipass can launch and run virtual machines and configure them with <a href="https://cloud-init.io/" class="p-link--inverted">cloud-init</a> like a public cloud. Prototype your cloud launches locally for free.</p>
+      <p>Get an instant Ubuntu VM with a single command.  Multipass can launch and run virtual machines and configure them with <a href="https://cloud-init.io/" class="p-link--inverted">cloud-init</a> like a public cloud.</p>
+      <p><a href="/install" class="p-button--positive">Install now</a></p>
     </div>
     <div class="col-6 u-hide--small u-align--center u-vertically-center">
       <img src="https://assets.ubuntu.com/v1/0698ab2d-muiltipass-promo-header.png" style="height: 200px; width: 364px;" alt="Multipass"/>
@@ -13,82 +17,15 @@
   </div>
 </section>
 
-<section class="p-strip u-no-padding--bottom" id="install">
-  <div class="u-fixed-width u-sv3">
-    <h2>Select OS to get started</h2>
-  </div>
-   <div class="row u-equal-height u-sv3">
-      <a id="tab-one" href="#tab-one__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab active" role="tab" aria-selected="true">
-        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
-        <p class="p-heading--5 p-tab__title">Linux</p>
-      </a>
-
-      <a id="tab-two" href="#tab-two__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="false">
-        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
-      </a>
-
-      <a id="tab-three" href="#tab-three__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="false">
-        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
-      </a>
-   </div>
-
-   <div class="row">
-     <div class="col-8 js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
-       {% include "/partial/_get-started-linux.html" %}
-     </div>
-     <div class="col-8 js-tab__content" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
-       {% include "/partial/_get-started-windows.html" %}
-     </div>
-     <div class="col-8 js-tab__content" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
-       {% include "/partial/_get-started-macos.html" %}
-     </div>
-   </div>
-</section>
-
-<section class="p-strip">
-  <div class="u-fixed-width u-align--center">
-    <script id="asciicast-394119" src="https://asciinema.org/a/394119.js?" async data-t="08" data-autoplay="true" data-speed="1.5"></script>
-  </div>
-</section>
-
-<section class="p-strip--suru-accent">
-  <div class="row u-equal-height u-vertically-center">
-    <div class="col-6 u-align--center u-hide--small">
-      <a aria-controls="modal" href="https://assets.ubuntu.com/v1/f401c3f4-Ubuntu_Server_CLI_pro_tips_2020-04.pdf" aria-hidden="true" tabindex="-1">
-        <img src="https://assets.ubuntu.com/v1/39a8dac8-Ubuntu_Server_CLI_pro_tips_2020-04.jpg" style="width: 350px;" alt="Ubuntu Server CLI pro tips"/>
-      </a>
-    </div>
-    <div class="col-6">
-      <p>The &rdquo;Ubuntu Server CLI cheat sheet&ldquo; is your fast path to learning the Linux command line - from basic file management to deploying Kubernetes and OpenStack.</p>
-      <a class="p-button--positive" aria-controls="modal" href="https://assets.ubuntu.com/v1/f401c3f4-Ubuntu_Server_CLI_pro_tips_2020-04.pdf">Download Cheat Sheet</a>
-    </div>
-  </div>
-</section>
-
-{% include "/shared/forms/ubuntu-server-pro-tips.html" %}
-
-<section class="p-strip">
-  <div class="u-fixed-width">
-    <blockquote class="p-pull-quote--large">
-      <p class="p-pull-quote__quote">Multipass provides a command line interface to launch, manage and generally fiddle about with instances of Linux. The downloading of a minty-fresh image takes a matter of seconds, and within minutes a VM can be up and running.</p>
-      <cite class="p-pull-quote__citation">The Register</cite>
-    </blockquote>
-  </div>
-</section>
-
-
 <section class="p-strip--light">
   <div class="row u-equal-height u-vertically-center">
     <div class="col-5 u-align--center u-hide--small">
       <img src="https://assets.ubuntu.com/v1/3328b4a0-Cloud-VMs.svg" style="width: 400px;"/>
     </div>
     <div class="col-7">
-      <h2>Cloud-style VMs on-demand</h2>
+      <h2>Cloud-style VMs at your fingertips</h2>
       <p class="p-heading--4">Spin up cloud instances with a single command</p>
-      <p>Launch instances of Ubuntu and initialise them with cloud-init metadata like AWS, Azure, Google, IBM and Oracle clouds. Simulate your own cloud deployment on your workstation.</p>
+      <p>Launch instances of Ubuntu and <a href="https://ubuntu.com/blog/using-cloud-init-with-multipass">initialise them with cloud-init metadata</a> like AWS, Azure, Google, IBM and Oracle clouds. Simulate your own cloud deployment on your workstation.</p>
     </div>
   </div>
 </section>
@@ -97,8 +34,8 @@
   <div class="row u-equal-height u-vertically-center">
     <div class="col-7">
       <h2>VMs for Windows, macOS and Linux</h2>
-      <p class="p-heading--4">Start Ubuntu VMs with each platform’s native hypervisor</p>
-      <p>Multipass uses Hyper-V on Windows, HyperKit on macOS and KVM on Linux for minimal overhead and the fastest possible start time.</p>
+      <p class="p-heading--4">Start Ubuntu VMs with each platform's native hypervisor</p>
+      <p>Multipass uses Hyper-V on Windows, HyperKit on macOS and KVM on Linux for minimal overhead and the fastest possible start time. <a href="/docs/set-up-the-driver">Switching your hypervisor to Virtualbox</a> is a breeze.</p>
     </div>
     <div class="col-5 u-hide--small u-align--center">
       <img src="https://assets.ubuntu.com/v1/c5602a1a-VMs-Windows-Linux-Mac.svg" style="height: 171px; width: 300px;"/>
@@ -129,7 +66,7 @@
       <h2>Designed for developer convenience</h2>
       <p class="p-heading--4">VMs you can trust with access to what you need</p>
       <p>Share files and folders between your host and your instances.</p>
-      <p>Your ‘primary’ instance gets special treatment with integration to your native filesystem and dedicated hot-key access.</p>
+      <p>Your 'primary' instance gets special treatment with integration to your native filesystem and dedicated hot-key access.</p>
       <p>Multipass automatically fetches the latest Ubuntu images from Canonical, minimising initial update time.</p>
     </div>
     <div class="col-5 u-align--center u-hide--small">
@@ -157,7 +94,7 @@
     <div class="col-7">
       <h2>Appliances in VMs</h2>
       <p class="p-heading--4">Ubuntu Appliance images to try before you Pi</p>
-      <p>Run a Virtual Ubuntu Appliance on your workstation without affecting your existing system. No need for spare hardware, just follow the steps and you’ll be up and running in minutes.</p>
+      <p>Run a Virtual Ubuntu Appliance on your workstation without affecting your existing system. No need for spare hardware, just follow the steps and you'll be up and running in minutes.</p>
       <a href="https://ubuntu.com/appliance/vm" class="p-button">Try Ubuntu Appliances</a>
     </div>
     <div class="col-5 u-align--center u-hide--small">
@@ -173,8 +110,8 @@
     </div>
     <div class="col-7">
       <h2>Join our community</h2>
-      <p>Multipass is built by a team of engineers at Canonical and a community of contributors. We appreciate your interest in Multipass, and if you want to join the discussion or contribute, come and say hi. We don’t bite. </p>
-      <a href="https://web.libera.chat/?channels=#multipass" class="p-button">Libera Chat</a>
+      <p>Multipass is built by a team of engineers at Canonical and a community of contributors. We appreciate your interest in Multipass, and if you want to join the discussion or contribute, come and say hi. We don't bite. </p>
+      <a href="https://webchat.freenode.net/?channels=#multipass" class="p-button">Freenode</a>
       <a href="https://github.com/canonical/multipass" class="p-button">GitHub</a>
       <a href="https://discourse.ubuntu.com/c/multipass/21" class="p-button">Discourse</a>
     </div>
