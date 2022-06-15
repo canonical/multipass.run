@@ -42,6 +42,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/install")
+def install():
+    return render_template("install.html")
+
+
 @app.route("/download/<regex('windows|macos'):osname>")
 def osredirect(osname):
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
