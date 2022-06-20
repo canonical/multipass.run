@@ -38,9 +38,11 @@ function setupTabs() {
       }
     }
 
-    tab.setAttribute("aria-selected", "true");
-    tab.classList.toggle("active");
-    tabContent.classList.toggle("u-hide");
+    if (tab.getAttribute("aria-selected") !== "true") {
+      tab.setAttribute("aria-selected", "true");
+      tab.classList.toggle("active");
+      tabContent.classList.toggle("u-hide");
+    }
 
     if (tab.classList.contains("active")) {
       var breakpoint = 620;
