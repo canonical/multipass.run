@@ -58,6 +58,7 @@
             </a>
           </div>
           {% for nav_group in navigation.nav_items %}
+          {% if not nav_group.hidden %}
             {% if nav_group.navlink_text %}
               {% if nav_group.navlink_href %}
               <h3 class="p-side-navigation__heading--linked">
@@ -74,6 +75,7 @@
               Use `create_navigation(nav_group.children, expandable=True)` for the nested nav levels to expand only when parent page is active.
             #}
             {{ create_navigation(nav_group.children, expandable=True) }}
+          {% endif %}
           {% endfor %}
         </div>
       </nav>
