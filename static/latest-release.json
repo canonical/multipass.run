@@ -1,11 +1,11 @@
 {
-  "version": "1.9.1",
-  "title": "New Multipass 1.9.1 release",
-  "description": "Add snapcraft:core22 support, fix two regressions.",
+  "version": "1.10.0",
+  "title": "New Multipass 1.10.0 release",
+  "description": "Instance modification, specify mounts at launch, cloud-init via URL",
   "download_url": "https://multipass.run/#install",
-  "release_url": "https://github.com/canonical/multipass/releases/tag/v1.9.1",
+  "release_url": "https://github.com/canonical/multipass/releases/tag/v1.10.0",
   "installer_urls": {
-    "windows": "https://github.com/canonical/multipass/releases/download/v1.9.1/multipass-1.9.1%2Bwin-win64.exe",
-    "macos": "https://github.com/canonical/multipass/releases/download/v1.9.1/multipass-1.9.1%2Bmac-Darwin.pkg"
+    "windows": "https://github.com/canonical/multipass/releases/download/v1.10.0/multipass-1.10.0%2Bwin-win64.exe",
+    "macos": "https://github.com/canonical/multipass/releases/download/v1.10.0/multipass-1.10.0%2Bmac-Darwin.pkg"
   }
 }
