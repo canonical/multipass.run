@@ -23,7 +23,7 @@
   {# search form #}
   <div class="p-strip--light is-shallow">
     <div class="u-fixed-width">
-      <form class="p-search-box" action="/docs/search">
+      <form class="p-search-box u-no-margin--bottom" action="/docs/search">
         <label for="search-input" class="u-off-screen">Search</label>
         <input class="p-search-box__input" name="q" id="search-input" type="search" {% if query %}value="{{ query }}"{% endif %} placeholder="e.g. multipass launch" />
         {% if siteSearch %}
