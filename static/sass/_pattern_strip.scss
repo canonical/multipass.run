@@ -7,50 +7,52 @@
     @extend %vf-strip;
 
     background-blend-mode: multiply, multiply, normal, normal, normal;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         to bottom right,
-        rgba(228, 228, 228, 0.54) 0%,
-        rgba(228, 228, 228, 0.54) 49.9%,
-        rgba(228, 228, 228, 0) 50%,
-        rgba(228, 228, 228, 0) 100%
+        rgb(228 228 228 / 54%) 0%,
+        rgb(228 228 228 / 54%) 49.9%,
+        rgb(228 228 228 / 0%) 50%,
+        rgb(228 228 228 / 0%) 100%
       ),
       linear-gradient(
         to bottom left,
-        rgba(216, 216, 216, 0.54) 0%,
-        rgba(216, 216, 216, 0.54) 49.9%,
-        rgba(216, 216, 216, 0) 50%,
-        rgba(216, 216, 216, 0) 100%
+        rgb(216 216 216 / 54%) 0%,
+        rgb(216 216 216 / 54%) 49.9%,
+        rgb(216 216 216 / 0%) 50%,
+        rgb(216 216 216 / 0%) 100%
       ),
       linear-gradient(
         to top right,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 1) 49%,
-        rgba(255, 255, 255, 0) 50%,
-        rgba(255, 255, 255, 0) 100%
+        rgb(255 255 255 / 100%) 0%,
+        rgb(255 255 255 / 100%) 49%,
+        rgb(255 255 255 / 0%) 50%,
+        rgb(255 255 255 / 0%) 100%
       ),
       linear-gradient(-89deg, #e95420 0%, #772953 38%, #2c001e 85%);
 
     @supports not (background-blend-mode: multiply) {
-      background-image: linear-gradient(
+      background-image:
+        linear-gradient(
           to bottom right,
-          rgba(228, 228, 228, 0.14) 0%,
-          rgba(228, 228, 228, 0.14) 49.9%,
-          rgba(228, 228, 228, 0) 50%,
-          rgba(228, 228, 228, 0) 100%
+          rgb(228 228 228 / 14%) 0%,
+          rgb(228 228 228 / 14%) 49.9%,
+          rgb(228 228 228 / 0%) 50%,
+          rgb(228 228 228 / 0%) 100%
         ),
         linear-gradient(
           to bottom left,
-          rgba(216, 216, 216, 0.14) 0%,
-          rgba(216, 216, 216, 0.14) 49.9%,
-          rgba(216, 216, 216, 0) 50%,
-          rgba(216, 216, 216, 0) 100%
+          rgb(216 216 216 / 14%) 0%,
+          rgb(216 216 216 / 14%) 49.9%,
+          rgb(216 216 216 / 0%) 50%,
+          rgb(216 216 216 / 0%) 100%
         ),
         linear-gradient(
           to top right,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 1) 49%,
-          rgba(255, 255, 255, 0) 50%,
-          rgba(255, 255, 255, 0) 100%
+          rgb(255 255 255 / 100%) 0%,
+          rgb(255 255 255 / 100%) 49%,
+          rgb(255 255 255 / 0%) 50%,
+          rgb(255 255 255 / 0%) 100%
         ),
         linear-gradient(-89deg, #e95420 0%, #772953 38%, #2c001e 85%);
     }
