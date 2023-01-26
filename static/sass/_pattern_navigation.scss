@@ -1,1 +1,7 @@
-
+// Temp fix until this issue is merged: https://github.com/canonical/vanilla-framework/issues/4634
+.p-navigation {
+  &__logo-title,
+  &__link {
+    font-weight: 300;
+  }
+}
