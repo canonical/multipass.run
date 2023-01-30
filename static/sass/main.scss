@@ -1,5 +1,6 @@
 @import "settings_colors";
-@import "vanilla-framework/scss/build";
+@import 'vanilla-framework';
+@include vanilla;
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
