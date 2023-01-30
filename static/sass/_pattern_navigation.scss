@@ -1,33 +1,10 @@
-@mixin multipass-p-navigation {
-  .p-navigation__banner {
-    background-color: $color-brand;
+// Temp fix until this issue is merged: https://github.com/canonical/vanilla-framework/issues/4634
+.p-navigation {
+  &__logo-title {
+    font-weight: 300 !important;
   }
 
-  .p-navigation {
-    .p-navigation__row {
-      padding: 0;
-
-      .p-navigation__banner {
-        padding: 0 $spv--large;
-
-        .p-navigation__logo {
-          font-weight: 400;
-          margin-right: 0;
-        }
-
-        .p-navigation__toggle {
-          &--open,
-          &--close {
-            font-weight: 400;
-          }
-        }
-      }
-
-      .p-navigation__link a {
-        height: 100%;
-        padding-left: $spv--large;
-        padding-right: $spv--large;
-      }
-    }
+  &__link {
+    font-weight: 400;
   }
 }
