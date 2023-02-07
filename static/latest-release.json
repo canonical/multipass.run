@@ -1,11 +1,11 @@
 {
-  "version": "1.11.0",
-  "title": "New Multipass 1.11.0 release",
-  "description": "Experimental native mounts, recursive transfer, UEFI booting",
+  "version": "1.11.1",
+  "title": "Multipass 1.11.1 bug fix release",
+  "description": "Fix Windows path, Virtualbox mount failure, Windows native mounts",
   "download_url": "https://multipass.run/#install",
-  "release_url": "https://github.com/canonical/multipass/releases/tag/v1.11.0",
+  "release_url": "https://github.com/canonical/multipass/releases/tag/v1.11.1",
   "installer_urls": {
-    "windows": "https://github.com/canonical/multipass/releases/download/v1.11.0/multipass-1.11.0%2Bwin-win64.exe",
-    "macos": "https://github.com/canonical/multipass/releases/download/v1.11.0/multipass-1.11.0%2Bmac-Darwin.pkg"
+    "windows": "https://github.com/canonical/multipass/releases/download/v1.11.1/multipass-1.11.1%2Bwin-win64.exe",
+    "macos": "https://github.com/canonical/multipass/releases/download/v1.11.1/multipass-1.11.1%2Bmac-Darwin.pkg"
   }
 }
