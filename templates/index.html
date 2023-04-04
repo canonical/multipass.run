@@ -34,7 +34,7 @@
 <section class="p-strip--light">
   <div class="row u-equal-height u-vertically-center">
     <div class="col-7">
-      <h2>VMs for Windows, macOS and Linux</h2>
+      <h3>VMs for Windows, macOS and Linux</h3>
       <p class="p-heading--4">Start Ubuntu VMs with each platform's native hypervisor</p>
       <p>Multipass uses Hyper-V on Windows, QEMU and HyperKit on macOS and LXD on Linux for minimal overhead and the fastest possible start time. <a href="/docs/set-up-the-driver">Switching your hypervisor to Virtualbox</a> is a breeze.</p>
     </div>
@@ -47,14 +47,19 @@
 <section class="p-strip--suru-accent">
   <div class="row u-equal-height u-vertically-center">
     <div class="col-6 u-align--center u-hide--small">
-      <img src="https://assets.ubuntu.com/v1/39a8dac8-Ubuntu_Server_CLI_pro_tips_2020-04.jpg" style="height: 280px; width: 400px;" alt="Ubuntu Server CLI pro tips"/>
+      <a aria-controls="modal" href="https://assets.ubuntu.com/v1/bb21c0e8-Ubuntu+Server+CLI+pro+tips+06.01.20.pdf?_ga=2.194029293.1707463146.1680603251-187335696.1680603251" aria-hidden="true" tabindex="-1">
+        <img src="https://assets.ubuntu.com/v1/39a8dac8-Ubuntu_Server_CLI_pro_tips_2020-04.jpg" style="height: 280px; width: 400px;" alt="Ubuntu Server CLI pro tips"/>
+      </a>
     </div>
     <div class="col-6">
+      <h2>Get started with Ubuntu the fast way</h2>
       <p>The “Ubuntu Server CLI cheat sheet” is your fast path to learning the Linux command line - from basic file management to deploying Kubernetes and OpenStack.</p>
-      <a class="p-link--external p-button--positive" target="blank" href="https://assets.ubuntu.com/v1/bb21c0e8-Ubuntu+Server+CLI+pro+tips+06.01.20.pdf">Download Cheat Sheet</a>
+      <a class="p-button--positive" aria-controls="modal" target="blank" href="https://assets.ubuntu.com/v1/bb21c0e8-Ubuntu+Server+CLI+pro+tips+06.01.20.pdf?_ga=2.194029293.1707463146.1680603251-187335696.1680603251">Download Cheat Sheet</a>
     </div>
   </div>
 </section>
+
+{% include "/shared/forms/ubuntu-server-pro-tips.html" %}
 
 <section class="p-strip">
   <div class="row u-equal-height u-vertically-center">
