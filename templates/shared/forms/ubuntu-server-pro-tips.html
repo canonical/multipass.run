@@ -8,19 +8,17 @@
       <div class="row u-no-padding">
         <div class="col-6">
           <label for="firstName" class="mktoLabel">First name:</label>
-          <input required  id="firstName" name="FirstName" maxlength="255" type="text" class="mktoField mktoRequired" >
+          <input required  id="firstName" name="firstName" maxlength="255" type="text" >
           <label for="lastName" class="mktoLabel">Last name:</label>
-          <input required  id="lastName" name="LastName" maxlength="255" type="text" class="mktoField mktoRequired">
+          <input required  id="lastName" name="lastName" maxlength="255" type="text">
           <label for="company" class="mktoLabel">Company name:</label>
-          <input required  id="company" name="Company" maxlength="255" type="text" class="mktoField mktoRequired">
+          <input required  id="company" name="company" maxlength="255" type="text">
         </div>
         <div class="col-6">
           <label for="title" class="mktoLabel">Job title:</label>
-          <input required  id="title" name="Title" maxlength="255" type="text" class="mktoField mktoRequired">
+          <input required  id="title" name="title" maxlength="255" type="text">
           <label for="email" class="mktoLabel ">Work email:</label>
-          <input required  id="email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired">
-          <label for="Phone" class="mktoLabel ">Mobile/cell phone number:</label>
-          <input required id="Phone" name="Phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired" required="required" />
+          <input required id="email" name="email" maxlength="255" type="email" pattern="^[^ ]+@[^ ]+\.[a-z]{2,26}$">
         </div>
       </div>
       <input class="mktoField" value="yes" id="CanonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox">
@@ -29,8 +27,6 @@
       <div class="g-recaptcha" data-sitekey="{{ CAPTCHA_API_KEY }}" style="margin: 2rem 0;"></div>
       <button type="submit" class="mktoButton p-button--positive">Download the pro tips</button>
       <input type="hidden" name="formid" class="mktoField" value="3825">
-      <input type="hidden" name="formVid" class="mktoField" value="3825">
-      <input type="hidden" name="munchkinId" class="mktoField" value="066-EOV-335">
       <input type="hidden" name="Consent_to_Processing__c" value="yes" />
       <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
       <input type="hidden" name="returnURL" value="https://assets.ubuntu.com/v1/bb21c0e8-Ubuntu+Server+CLI+pro+tips+06.01.20.pdf?_ga=2.194029293.1707463146.1680603251-187335696.1680603251" aria-label="" />
