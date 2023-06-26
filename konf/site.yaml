@@ -1,6 +1,6 @@
 domain: multipass.run
 
-image: prod-comms.docker-registry.canonical.com/multipass.run
+image: prod-comms.ps5.docker-registry.canonical.com/multipass.run
 
 useProxy: true
 
