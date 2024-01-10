@@ -1,11 +1,11 @@
 {
-  "version": "1.12.2",
-  "title": "Multipass 1.12.2 release",
-  "description": "Fix regession on macOS with hanging clients",
+  "version": "1.13.0",
+  "title": "Multipass 1.13.0 release",
+  "description": "Snapshots support, update to Qt 6.2.4, better classic mount performance",
   "download_url": "https://multipass.run/#install",
-  "release_url": "https://github.com/canonical/multipass/releases/tag/v1.12.2",
+  "release_url": "https://github.com/canonical/multipass/releases/tag/v1.13.0",
   "installer_urls": {
-    "windows": "https://github.com/canonical/multipass/releases/download/v1.12.2/multipass-1.12.2%2Bwin-win64.exe",
-    "macos": "https://github.com/canonical/multipass/releases/download/v1.12.2/multipass-1.12.2%2Bmac-Darwin.pkg"
+    "windows": "https://github.com/canonical/multipass/releases/download/v1.13.0/multipass-1.13.0%2Bwin-win64.exe",
+    "macos": "https://github.com/canonical/multipass/releases/download/v1.13.0/multipass-1.13.0%2Bmac-Darwin.pkg"
   }
 }
