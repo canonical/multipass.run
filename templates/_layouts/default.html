@@ -22,8 +22,6 @@
   <!-- End Google Tag Manager -->
 
   <link rel="stylesheet" href="/static/css/main.css">
-
-  <script src="/static/js/osselector.js" defer></script>
 </head>
 
 <body>
@@ -63,9 +61,8 @@
             <a class="p-navigation__link" href="https://discourse.ubuntu.com/c/multipass">Discourse</a>
           </li>
         </ul>
-        <div class="p-github-buttons">
-          {% include "/partial/_github-buttons.html" %}
-        </div>
+        <ul class="p-navigation__items global-nav">
+        </ul>
       </nav>
     </div>
   </header>
@@ -112,12 +109,14 @@
     </div>
   </footer>
 
-  <script src="/static/js/modules/global-nav.js"></script>
-  <script src="/static/js/modules/cookie-policy.js"></script>
-  <script src="/static/js/tabs.js"></script>
+  <script src="{{ versioned_static('js/modules/global-nav.js') }}"></script>
+  <script src="{{ versioned_static('js/modules/cookie-policy.js')}}"></script>
+  <script src="{{ versioned_static('js/tabs.js') }}"></script>
   <script>
     cpNs.cookiePolicy();
-    canonicalGlobalNav.createNav({maxWidth:"72rem"});
+    if (typeof canonicalGlobalNav !== "undefined") {
+      canonicalGlobalNav.createNav({breakpoint: 1035});
+    }
   </script>
 </body>
 
