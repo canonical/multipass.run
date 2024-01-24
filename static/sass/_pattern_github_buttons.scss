@@ -1,6 +1,6 @@
 @mixin multipass-github-buttons {
   .p-github-buttons {
-    margin-right: 1rem;
-    margin-top: 0.7rem;
+    align-items: center;
+    display: inline-flex;
   }
 }
