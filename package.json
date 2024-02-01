@@ -9,8 +9,9 @@
     "watch-js": "watch -p 'static/js/**/*.js' -c 'yarn run build-js'",
     "build": "yarn run build-css && yarn run build-js",
     "build-css": "sass static/sass/main.scss static/css/main.css --load-path=node_modules --style=compressed && postcss --no-map --use autoprefixer --replace 'static/css/**/*.css'",
-    "build-js": "yarn run copy-cookie-policy && yarn run copy-global-nav",
+    "build-js": "yarn run copy-cookie-policy && yarn run copy-global-nav && yarn run copy-discourse-rad-parser",
     "copy-cookie-policy": "mkdir -p static/js/modules && cp node_modules/@canonical/cookie-policy/build/js/cookie-policy.js static/js/modules",
+    "copy-discourse-rad-parser": "mkdir -p static/js/build/discourse-rad-parser && cp -a node_modules/@canonical/discourse-rad-parser/build/js/. static/js/build/discourse-rad-parser",
     "copy-global-nav": "mkdir -p static/js/modules && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/modules",
     "format-python": "black --line-length 79 webapp",
     "lint-python": "flake8 webapp tests && black --check --line-length 79 webapp tests",
@@ -22,6 +23,7 @@
   "dependencies": {
     "@canonical/cookie-policy": "3.5.0",
     "@canonical/global-nav": "3.6.2",
+    "@canonical/discourse-rad-parser": "1.0.1",
     "autoprefixer": "10.4.13",
     "sass": "1.57.1",
     "postcss": "8.4.31",
