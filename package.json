@@ -28,7 +28,7 @@
     "sass": "1.57.1",
     "postcss": "8.4.31",
     "postcss-cli": "10.1.0",
-    "vanilla-framework": "4.7.0"
+    "vanilla-framework": "4.11.0"
   },
   "devDependencies": {
     "prettier": "2.8.8",
