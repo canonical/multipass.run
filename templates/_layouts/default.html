@@ -32,82 +32,18 @@
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-  <header id="navigation" class="p-navigation is-dark">
-    <div class="p-navigation__row">
-      <div class="p-navigation__banner">
-      <div class="p-navigation__tagged-logo">
-        <a class="p-navigation__link" href="/">
-          <div class="p-navigation__logo-tag">
-            <img class="p-navigation__logo-icon" src="https://assets.ubuntu.com/v1/7b658b39-Favicon+-+Multipass.svg" alt="">
-          </div>
-          <span class="p-navigation__logo-title">Canonical Multipass</span>
-        </a>
-      </div>
-        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
-        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
-      </div>
-      <nav class="p-navigation__nav" role="menubar">
-        <span class="u-off-screen">
-          <a href="#main-content">Jump to main content</a>
-        </span>
-        <ul class="p-navigation__items" role="menu">
-          <li class="p-navigation__item {% if '/install' in request.path %}is-selected{% endif %}" role="menuitem">
-            <a class="p-navigation__link" href="/install">Install</a>
-          </li>
-          <li class="p-navigation__item {% if '/docs' in request.path %}is-selected{% endif %}" role="menuitem">
-            <a class="p-navigation__link" href="/docs">Docs</a>
-          </li>
-          <li class="p-navigation__item" role="menuitem">
-            <a class="p-navigation__link" href="https://discourse.ubuntu.com/c/multipass">Discourse</a>
-          </li>
-        </ul>
-        <ul class="p-navigation__items global-nav">
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <div class="page-content" id="main-content">
+{% block body %}
+
+  {% include "_layouts/_navigation.html" %}
+
+  <div class="{% block page_class %}{% endblock %}" id="main-content">
     {% block content %}{% endblock %}
   </div>
 
-  <footer class="p-strip">
-    <div class="row">
-      <div class="col-12">
-        &copy; {{ now('%Y') }} Canonical Ltd.
-        <nav>
-          <ul class="p-inline-list--middot">
-            <li class="p-inline-list__item">
-              <a
-                aria-label="External link to the Ubuntu legal information page"
-                href="http://www.ubuntu.com/legal">
-                Legal information
-              </a>
-            </li>
-            <li class="p-inline-list__item">
-              <a class="js-revoke-cookie-manager" href="">Manage your tracker settings</a>
-            </li>
-            <li class="p-inline-list__item">
-              <a
-                href="https://github.com/canonical/multipass/issues/new/choose">
-                Report a bug on Multipass itself
-              </a>
-            </li>
-            <li class="p-inline-list__item">
-              <a
-                aria-label="External link to report a bug on this site"
-                href="https://github.com/canonical-web-and-design/multipass.run/issues/new">
-                Report a bug on this site
-              </a>
-            </li>
-          </ul>
-          <span class="u-off-screen">
-            <a href="#">Go to the top of the page</a>
-          </span>
-        </nav>
-      </div>
-    </div>
-  </footer>
+  {% include "_layouts/_footer.html" %}
+
+{% endblock body %}
 
   <script src="{{ versioned_static('js/modules/global-nav.js') }}"></script>
   <script src="{{ versioned_static('js/modules/cookie-policy.js')}}"></script>

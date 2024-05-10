@@ -1,4 +1,4 @@
-@import "settings_colors";
+@import "settings";
 @import 'vanilla-framework';
 @include vanilla;
 
@@ -16,3 +16,7 @@
 @include multipass-github-buttons;
 @include multipass-p-strip;
 @include multipass-p-tabs;
+
+.p-navigation__banner {
+  padding-left: 0;
+}
