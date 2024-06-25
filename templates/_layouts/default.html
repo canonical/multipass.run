@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{% block title %}Multipass orchestrates virtual Ubuntu instances{% endblock %}</title>
-  <meta name="description" content="Multipass is a CLI to launch and manage VMs on Windows, Mac and Linux that simulates a cloud environment with support for cloud-init. Get Ubuntu on-demand with clean integration to your IDE and version control on your native platform.">
-
-  <link rel="icon" type="image/png" href="https://assets.ubuntu.com/v1/a12a3159-Multipass-favicon_32px.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="https://assets.ubuntu.com/v1/f1262535-Multipass-favicon_64px.png" sizes="64x64" />
-  <link rel="icon" type="image/png" href="https://assets.ubuntu.com/v1/b9411b66-Multipass-favicon_128px.png" sizes="128x128" />
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% block title %}Multipass orchestrates virtual Ubuntu instances{% endblock %}
+    </title>
+    <meta name="description"
+          content="Multipass is a CLI to launch and manage VMs on Windows, Mac and Linux that simulates a cloud environment with support for cloud-init. Get Ubuntu on-demand with clean integration to your IDE and version control on your native platform." />
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="https://assets.ubuntu.com/v1/f38b9c7e-COF%20apple-touch-icon.png" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="https://assets.ubuntu.com/v1/a12a3159-Multipass-favicon_32px.png" />
+    <link rel="icon"
+          type="image/svg"
+          sizes="16x16"
+          href="https://assets.ubuntu.com/v1/8ed5e264-Multipass-icon_16x16.svg" />
+    <link rel="manifest" href="{{ versioned_static("files/site.webmanifest") }}" />
+    <!-- Serving favicon for search engines locally -->
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ versioned_static("favicons/COF-favicon-48x48.png") }}" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WTCRZD7');</script>
-  <!-- End Google Tag Manager -->
-
-  <link rel="stylesheet" href="/static/css/main.css">
-</head>
-
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTCRZD7"
-  height="0" width="0" style="display: none; visibility: hidden;"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-
-{% block body %}
-
-  {% include "_layouts/_navigation.html" %}
-
-  <div class="{% block page_class %}{% endblock %}" id="main-content">
-    {% block content %}{% endblock %}
-  </div>
-
-  {% include "_layouts/_footer.html" %}
-
-{% endblock body %}
-
-  <script src="{{ versioned_static('js/modules/global-nav.js') }}"></script>
-  <script src="{{ versioned_static('js/modules/cookie-policy.js')}}"></script>
-  <script src="{{ versioned_static('js/tabs.js') }}"></script>
-  <script>
+  })(window,document,'script','dataLayer','GTM-WTCRZD7');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="/static/css/main.css" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTCRZD7"
+        height="0"
+        width="0"
+        style="display: none;
+               visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    {% block body %}
+      {% include "_layouts/_navigation.html" %}
+      <div class="{% block page_class %}{% endblock %}" id="main-content">
+        {% block content %}{% endblock %}
+      </div>
+      {% include "_layouts/_footer.html" %}
+    {% endblock body %}
+    <script src="{{ versioned_static('js/modules/global-nav.js') }}"></script>
+    <script src="{{ versioned_static('js/modules/cookie-policy.js')}}"></script>
+    <script src="{{ versioned_static('js/tabs.js') }}"></script>
+    <script>
     cpNs.cookiePolicy();
     if (typeof canonicalGlobalNav !== "undefined") {
       canonicalGlobalNav.createNav({breakpoint: 1035});
     }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
