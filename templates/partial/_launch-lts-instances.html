@@ -1,26 +1,26 @@
 <h2>How to launch LTS instances</h2>
 <div class="p-stepped-list__content">
-<p>The first five minutes with Multipass let you know how easy it is to have a lightweight cloud handy. Let’s launch a few LTS instances, list them, exec a command, use cloud-init and clean up old instances to start.</p>
+<p>The first five minutes with Multipass let you know how easy it is to have a lightweight cloud handy. Let’s launch a few LTS instances, list them, run a command, use cloud-init and clean up old instances to start.</p>
 <div class="u-sv3">
-  <p>Launch an instance (by default you get the current Ubuntu LTS)</p>
+  <p>Launch an instance (by default you get the current Ubuntu LTS):</p>
   <div class="p-code-snippet">
     <pre class="p-code-snippet__block--icon"><code>multipass launch --name foo</code></pre>
   </div>
 </div>
 <div class="u-sv3">
-  <p>Run commands in that instance, try running bash (logout or ctrl-d to quit)</p>
+  <p>Run commands in that instance, try running bash (logout or ctrl-d to quit):</p>
   <div class="p-code-snippet">
     <pre class="p-code-snippet__block--icon"><code>multipass exec foo -- lsb_release -a</code></pre>
   </div>
 </div>
 <div class="u-sv3">
-  <p>See your instances</p>
+  <p>See your instances:</p>
   <div class="p-code-snippet">
     <pre class="p-code-snippet__block--icon"><code>multipass list</code></pre>
   </div>
 </div>
 <div class="u-sv3">
-  <p>Stop and start instances</p>
+  <p>Stop and start instances:</p>
   <div class="p-code-snippet">
     <pre class="p-code-snippet__block--icon"><code>multipass stop foo bar</code></pre>
   </div>
@@ -29,7 +29,7 @@
   </div>
 </div>
 <div class="u-sv3">
-  <p>Clean up what you don’t need</p>
+  <p>Clean up what you don't need:</p>
   <div class="p-code-snippet">
     <pre class="p-code-snippet__block--icon"><code>multipass delete bar</code></pre>
   </div>
@@ -38,25 +38,19 @@
   </div>
 </div>
 <div class="u-sv3">
-  <p>Find alternate images to launch</p>
+  <p>Find alternate images to launch:</p>
   <div class="p-code-snippet">
     <pre class="p-code-snippet__block--icon"><code>multipass find</code></pre>
   </div>
 </div>
 <div class="u-sv3">
-  <p>Pass a cloud-init metadata file to an instance on launch. See <a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">using cloud-init with multipass</a> for more details</p>
+  <p>Pass a cloud-init metadata file to an instance on launch (see <a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">Using cloud-init with Multipass</a> for more details):</p>
   <div class="p-code-snippet">
     <pre class="p-code-snippet__block--icon"><code>multipass launch -n bar --cloud-init cloud-config.yaml</code></pre>
   </div>
 </div>
 <div class="u-sv3">
-  <p>See your instances</p>
-  <div class="p-code-snippet">
-    <pre class="p-code-snippet__block--icon"><code>multipass list</code></pre>
-  </div>
-</div>
-<div class="u-sv3">
-  <p>Get help</p>
+  <p>Get help:</p>
   <div class="p-code-snippet">
     <pre class="p-code-snippet__block--icon"><code>multipass help</code></pre>
   </div>
@@ -64,6 +58,6 @@
     <pre class="p-code-snippet__block--icon"><code>multipass help &lt;command&gt;</code></pre>
   </div>
   <div class="u-sv3">
-    <p>Don’t forget you still have <code>'foo'</code> running. To learn more about Multipass keep reading, <a href="/docs">go to the docs</a>, or <a href="https://discourse.ubuntu.com/c/multipass/21">join the discussion and get involved.</a></p>
+    <p>Don't forget you still have <code>"foo"</code> runnin! To learn more about Multipass, <a href="/docs">go to the docs</a>, or <a href="https://discourse.ubuntu.com/c/multipass/21">join the discussion and get involved.</a></p>
   </div>
 </div>
