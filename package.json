@@ -21,7 +21,7 @@
     "test-python": "python3 -m unittest discover tests"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.5.0",
+    "@canonical/cookie-policy": "3.6.4",
     "@canonical/global-nav": "3.6.4",
     "@canonical/discourse-rad-parser": "1.0.1",
     "autoprefixer": "10.4.13",
