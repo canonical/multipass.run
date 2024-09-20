@@ -89,7 +89,6 @@ app.add_url_rule(
         session=session,
         site="multipass.run/docs",
         template_path="docs/search.html",
-        request_limit="1/day",
     ),
 )
 
