@@ -85,6 +85,7 @@ app.add_url_rule(
     "/docs/search",
     "docs-search",
     build_search_view(
+        app=app,
         session=session,
         site="multipass.run/docs",
         template_path="docs/search.html",
