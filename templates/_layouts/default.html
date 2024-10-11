@@ -23,6 +23,9 @@
     <link rel="manifest" href="{{ versioned_static("files/site.webmanifest") }}" />
     <!-- Serving favicon for search engines locally -->
     <link rel="icon" type="image/png" sizes="48x48" href="{{ versioned_static("favicons/COF-favicon-48x48.png") }}" />
+    <!-- Cookie policy -->
+    <script src="{{ versioned_static('js/modules/cookie-policy.js')}}"></script>
+    <script>cpNs.cookiePolicy();</script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -49,11 +52,9 @@
       </div>
       {% include "_layouts/_footer.html" %}
     {% endblock body %}
-    <script src="{{ versioned_static('js/modules/global-nav.js') }}"></script>
-    <script src="{{ versioned_static('js/modules/cookie-policy.js')}}"></script>
+    <script src="{{ versioned_static('js/modules/global-nav.js') }}"></script>    
     <script src="{{ versioned_static('js/tabs.js') }}"></script>
-    <script>
-    cpNs.cookiePolicy();
+    <script>    
     if (typeof canonicalGlobalNav !== "undefined") {
       canonicalGlobalNav.createNav({breakpoint: 1035});
     }
