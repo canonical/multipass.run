@@ -21,14 +21,14 @@
     "test-python": "python3 -m unittest discover tests"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.6.4",
+    "@canonical/cookie-policy": "3.6.5",
     "@canonical/global-nav": "3.6.4",
-    "@canonical/discourse-rad-parser": "1.0.1",
+    "@canonical/discourse-rad-parser": "1.0.2",
     "autoprefixer": "10.4.13",
     "sass": "1.57.1",
     "postcss": "8.4.31",
     "postcss-cli": "10.1.0",
-    "vanilla-framework": "4.16.0"
+    "vanilla-framework": "4.18.4"
   },
   "devDependencies": {
     "prettier": "2.8.8",

@@ -23,15 +23,15 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@canonical/cookie-policy@3.6.4":
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/@canonical/cookie-policy/-/cookie-policy-3.6.4.tgz#895c3770f621b73d88b0d5843c43a32d99e4a462"
-  integrity sha512-kfwamTpAaBhtH5TzlMb8wE814a8lIbONUuSYnS7VPiHDfcdmw4NoBPNpldmNY1j3CAT5vMKOx5kulRTWpEXpag==
+"@canonical/cookie-policy@3.6.5":
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/@canonical/cookie-policy/-/cookie-policy-3.6.5.tgz#50d82df6da2970b6b5d78d066dd94fcc1317e591"
+  integrity sha512-CQJKSkuLXhSumkIIw4YPSjR7k9561hZ3EEdMPQTkAVTxXURhm3WzJm/uyrvcAuU/a//jzWa8ScltCaHFBdACew==
 
-"@canonical/discourse-rad-parser@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@canonical/discourse-rad-parser/-/discourse-rad-parser-1.0.1.tgz#a46bc527bdd07bbab5fc5a44f7620744723222e7"
-  integrity sha512-P/q9OYdOF3/sYbsfWfzZrjzhBKnhCQo6ADYDJlMASEXJs1b6U2KxC3ul8RD4DBgzOqEKoALUAB1jutsYVUNP2g==
+"@canonical/discourse-rad-parser@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@canonical/discourse-rad-parser/-/discourse-rad-parser-1.0.2.tgz#f4e32478dd569facbf22f066115a38e6ef8900ef"
+  integrity sha512-MCeJKcyerLfOVJ90PS2VnVvk2x8ek4Brah1V5UcbnspTBaV4Cju/lWqwAQcCC/jhSz74OcgW0n9wsp15Yy1Acg==
 
 "@canonical/global-nav@3.6.4":
   version "3.6.4"
@@ -1550,10 +1550,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-framework@4.16.0:
-  version "4.16.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.16.0.tgz#54e7a51e073de043d45a7bac37ffaa4f4351ac4a"
-  integrity sha512-LrxZLiNOm0cTpG++1X4MMy2efg8Xhc08JUAwNAybeSQ5FaaBGiAodbV1Fx3QvJxlaPFQqsjOdT6uZDwuOD7YJg==
+vanilla-framework@4.18.4:
+  version "4.18.4"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.18.4.tgz#8f740cd369d9a61d1cc3c34d3119660db4030e4a"
+  integrity sha512-g5jotlb6ENcK1+9hF3QsP5y8hGIXkgEdwjnDGTMEJ3vmtmwSJNa3KWp0QaFBE59nIZq71VGxTbYh+GI+9dzlLQ==
 
 vanilla-framework@4.9.0:
   version "4.9.0"
