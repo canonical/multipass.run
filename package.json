@@ -24,8 +24,8 @@
     "@canonical/cookie-policy": "3.6.4",
     "@canonical/global-nav": "3.6.4",
     "@canonical/discourse-rad-parser": "1.0.1",
-    "autoprefixer": "10.4.13",
-    "sass": "1.57.1",
+    "autoprefixer": "10.5.5",
+    "sass": "1.104.0",
     "postcss": "8.4.31",
     "postcss-cli": "10.1.0",
     "vanilla-framework": "4.16.0"
