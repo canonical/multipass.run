@@ -26,7 +26,7 @@
     "@canonical/discourse-rad-parser": "1.0.1",
     "autoprefixer": "10.4.13",
     "sass": "1.57.1",
-    "postcss": "8.4.31",
+    "postcss": "8.5.23",
     "postcss-cli": "10.1.0",
     "vanilla-framework": "4.16.0"
   },
